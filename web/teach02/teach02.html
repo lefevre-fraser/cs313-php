@@ -10,8 +10,8 @@
         <script>
             $(document).ready(function () {
                 $("#color_button").click(function() {
-                    $color = $("#color").val();
-                    $("#top_div").css('backgound-color', $color);
+                    var color = $("#color").val();
+                    $("#top_div").css({'backgound-color': color});
                 });
             })
         </script>
