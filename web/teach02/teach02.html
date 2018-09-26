@@ -15,15 +15,9 @@
                 });
 
                 $("hide_show").click(function() {
-                    if ($("#bot_div").is(":hidden")) {
-                        $("#bot_div").fadeOut('slow', function() {
-                            
-                        });;
-                    } else {
-                        $("#bot_div").fadeIn('slow', function() {
-                            
-                        });;
-                    }
+                    $("bot_div").fadeToggle('slow', function() {
+                        //finished toggle
+                    });
                 });
             });
         </script>
