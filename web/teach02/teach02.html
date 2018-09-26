@@ -13,7 +13,11 @@
                     var color = $("#color").val();
                     $("#top_div").css('backgroundColor', color);
                 });
-            })
+
+                $("hide_show").click(function() {
+                    this.fadeIn()
+                });
+            });
         </script>
     </head>
     
@@ -26,6 +30,7 @@
         <div id="mid_div">
             <p class="wrap">This is the middle</p>
         </div>
+        <button id="hide_show">Hide/Show Bottom Div</button>
         <div id="bot_div">
             <p class="wrap">This is the bottom</p>
         </div>
