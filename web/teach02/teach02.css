@@ -1,5 +1,7 @@
 #top_div, #mid_div, #bot_div {
-	font-size: 3em;
+	font-size: 1em;
+	padding: .1em;
+	margin: .2em;
 }
 
 #top_div {
