@@ -15,7 +15,11 @@
                 });
 
                 $("hide_show").click(function() {
-                    this.fadeIn()
+                    if ($("#bot_div").is(":visable")) {
+                        $("#bot_div").fadeOut();
+                    } else {
+                        $("#bot_div").fadeIn();
+                    }
                 });
             });
         </script>
