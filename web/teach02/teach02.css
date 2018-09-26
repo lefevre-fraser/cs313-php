@@ -1,11 +1,5 @@
-body {
-	padding: .25em;
-}
-
 #top_div, #mid_div, #bot_div {
 	font-size: 1em;
-	padding: .25em;
-	margin: .25em;
 }
 
 #top_div:hover, #mid_div:hover, #bot_div:hover {
