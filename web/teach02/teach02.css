@@ -1,11 +1,15 @@
-#top_div {
+#top_div, #mid_div, #bot_div {
+	font-size: 20em;
+}
 
+#top_div {
+	background-color: lightgrey;
 }
 
 #mid_div {
-
+	background-color: grey;
 }
 
 #bot_div {
-	
+	background-color: tan;
 }
