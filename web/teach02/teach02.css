@@ -16,6 +16,8 @@
 	background-color: tan;
 }
 
-pre.wrap {
+p.wrap {
 	word-wrap: all;
+	padding: 0;
+	margin: 0;
 }
