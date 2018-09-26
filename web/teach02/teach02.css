@@ -8,6 +8,10 @@ body {
 	margin: .25em;
 }
 
+#top_div:hover, #mid_div:hover, #bot_div:hover {
+	font-weight: bold;
+}
+
 #top_div {
 	background-color: lightgrey;
 }
