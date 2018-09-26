@@ -1,5 +1,5 @@
 #top_div, #mid_div, #bot_div {
-	font-size: 20em;
+	font-size: 3em;
 }
 
 #top_div {
@@ -12,4 +12,8 @@
 
 #bot_div {
 	background-color: tan;
+}
+
+pre.wrap {
+	word-wrap: all;
 }
