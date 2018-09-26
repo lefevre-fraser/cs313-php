@@ -3,7 +3,7 @@ body {
 }
 
 #top_div, #mid_div, #bot_div {
-	box-sizing: content-box;
+	box-sizing: border-box;
 	font-size: 1em;
 	padding: .25em;
 	margin: .25em;
