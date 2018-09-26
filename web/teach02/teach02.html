@@ -9,10 +9,10 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script>
             $(document).ready(function () {
-                $.fn.ChangeBackColor = function() {
+                $("#color_button").click(function() {
                     $color = $("#color").val();
                     $("#top_div").css('backgound-color', $color);
-                }
+                });
             })
         </script>
     </head>
@@ -20,7 +20,7 @@
     <body>
         <div id="top_div">
             <input type="text=" id="color" placeholder="lightgrey">
-            <button onclick="ChangeBackColor()">Change Color</button>
+            <button id="color_button">Change Color</button>
             <p class="wrap">This is the top</p>
         </div>
         <div id="mid_div">
