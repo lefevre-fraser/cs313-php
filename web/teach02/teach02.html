@@ -31,19 +31,21 @@
     </head>
     
     <body>
-        <div id="top_div" class="container">
-            <input type="text=" id="color" placeholder="lightgrey">
-            <button id="color_button" class="btn btn-lg">Change Color</button>
-            <p class="wrap">This is the top</p>
+        <div class="container">
+            <div id="top_div" class="row">
+                <input type="text=" id="color" placeholder="lightgrey">
+                <button id="color_button" class="btn btn-lg">Change Color</button>
+                <p class="wrap">This is the top</p>
+            </div>
+            <div id="mid_div" class="row">
+                <p class="wrap">This is the middle</p>
+            </div>
+            <button id="hide_show" class="btn btn-lg btn-block btn-primary">Hide/Show Bottom Div</button>
+            <div id="bot_div" class="row">
+                <p class="wrap">This is the bottom</p>
+            </div>
+            <button onclick="ClickAlert()" class="btn btn-lg btn-block btn-primary">Click Me</button>
         </div>
-        <div id="mid_div" class="container">
-            <p class="wrap">This is the middle</p>
-        </div>
-        <button id="hide_show" class="btn btn-lg btn-block btn-primary">Hide/Show Bottom Div</button>
-        <div id="bot_div" class="container">
-            <p class="wrap">This is the bottom</p>
-        </div>
-        <button onclick="ClickAlert()" class="btn btn-lg btn-block btn-primary">Click Me</button>
 
 
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
