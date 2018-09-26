@@ -16,9 +16,13 @@
 
                 $("hide_show").click(function() {
                     if ($("#bot_div").is(":visable")) {
-                        $("#bot_div").fadeOut();
+                        $("#bot_div").fadeOut('slow', function() {
+                            
+                        });;
                     } else {
-                        $("#bot_div").fadeIn();
+                        $("#bot_div").fadeIn('slow', function() {
+                            
+                        });;
                     }
                 });
             });
