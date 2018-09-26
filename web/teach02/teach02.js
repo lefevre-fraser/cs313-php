@@ -16,8 +16,9 @@ $(document).ready(function () {
     });
 
     $("#hide_show").click(function() {
-        $("#bot_div").fadeToggle(2000, "swing", function() {
-            //finished toggle
-        });
+	    if ($("#bot_div").is(":visable")) {
+	    	$("#bot_div").animate({opacity: 0}, 2000);
+	    	$("#bot_div").hide();
+	    }
     });
 });
