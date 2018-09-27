@@ -16,8 +16,8 @@ $(document).ready(function () {
     });
 
     $("#hide_show").click(function() {
-	    if ($("#bot_div").css('opacity') == 1) {
-	    	$("#bot_div").animate({opacity: 0}, 2000);
-	    }
+	    $("#bot_div").fadeToggle('2000', function() {
+	    	// finished
+	    });
     });
 });
