@@ -10,7 +10,7 @@ print(
 		</header>
 		<hr>
 		<div class='container-fluid'>
-			<a class='btn btn-lg btn-primary btn-group' href='index.php'>About Me</a>
+			<a class='btn btn-lg btn-primary btn-group active' href='index.php'>About Me</a>
 			<a class='btn btn-lg btn-primary btn-group' href='assignments.php'>Assignments Page</a>
 		</div>
 		<hr>
