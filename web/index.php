@@ -10,7 +10,7 @@
         <script src="index.js"></script>
     </head>
     
-    <body>
+    <body class="container">
     	<?php  
     		include("header.php");
     	?>
