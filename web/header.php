@@ -1,9 +1,14 @@
 <?php
+
+// Uses Bootstrap classes. Must include bootstap to use.
+
 print(
 "
-	<header>
-		<h1>Hello World!</h1>
-	</header>
+	<div class='container-fluid'>
+		<header>
+			<h1>Welcome to my Home... Page.</h1>
+		</header>
+	</div>
 "
 );
 ?>

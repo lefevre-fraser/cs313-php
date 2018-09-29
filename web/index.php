@@ -15,8 +15,8 @@
     		include("header.php");
     	?>
 
-    	<div>
-    		<div>
+    	<div class="container-fluid">
+    		<div class="container-fluid">
     			<h3 class="h3">My Header</h3>
     			<p class="p-lg-3">My Body</p>
     		</div>
