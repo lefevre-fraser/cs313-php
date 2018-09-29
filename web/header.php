@@ -1,3 +1,7 @@
-<header>
-	<h1>Hello World!</h1>
-</header>
+<?php
+
+print("	<header>
+			<h1>Hello World!</h1>
+		</header>
+		");
+?>
