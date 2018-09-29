@@ -11,9 +11,20 @@
     </head>
     
     <body>
-    	<?php  
-    		include("header.php");
-    	?>
+    	<div id="main_div" class="container-fluid border-primary border-light border rounded">
+
+            <?php  
+                include("header.php");
+            ?>
+
+            <div class="container-fluid">
+                <div class="container-fluid">
+                    <h3 class="h3">My Header</h3>
+                    <p id="intro" class="p-lg-3">My Body</p>
+                </div>
+            </div>
+
+        </div>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
