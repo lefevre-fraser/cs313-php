@@ -1,8 +1,8 @@
 #main_div {
 	background-color: lightblue;
 	border: outset;
-	height: 98%;
-	width: 98%;
+	min-height: 97%;
+	width: 97%;
 	padding: 2%;
-	margin: 1%;
+	margin: 1.5%;
 }
