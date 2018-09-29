@@ -21,6 +21,7 @@
 	    		<div class="container-fluid">
 	    			<h3 class="h3">A note&#9835; about myself:</h3>
 	    			<p id="intro" class="p-lg-3">My Body</p>
+	    			<img src="pictures/MyWifeAndI.jpg" alt="My Wife And I" class="col-lg">
 	    		</div>
 	    	</div>
 
