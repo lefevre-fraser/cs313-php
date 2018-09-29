@@ -10,3 +10,7 @@
 #intro {
 	padding-left: .5em;
 }
+
+img.intro {
+	max-height: 300px;
+}
