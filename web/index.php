@@ -22,7 +22,7 @@
 	    			<h3 class="h3">A note&#9835; about myself:</h3>
 	    			<div class="container-fluid row">
 		    			<p id="intro" class="p-lg-3 col-4">My Body</p>
-	    				<img src="pictures/MyWifeAndI.jpg" alt="My Wife And I" class="col-8">
+	    				<img src="pictures/MyWifeAndI.jpg" alt="My Wife And I" class="col-8 img-fluid small">
 	    			</div>
 	    		</div>
 	    	</div>
