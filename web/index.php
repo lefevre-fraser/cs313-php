@@ -13,9 +13,5 @@
     	<?php  
     		include("header.php");
     	?>
-
-        <div id="main_div">
-        
-        </div>
     </body>
 </html>
