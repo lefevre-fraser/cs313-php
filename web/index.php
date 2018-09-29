@@ -11,7 +11,7 @@
     </head>
     
     <body>
-    	<div id="main_div" class="container-fluid border-primary border-light border rounded-circle">
+    	<div id="main_div" class="container-fluid border-primary border-light border rounded-top">
 
 	    	<?php  
 	    		include("header.php");
