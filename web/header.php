@@ -8,12 +8,12 @@ print(
 		<header>
 			<h1>Welcome to my Home... Page.</h1>
 		</header>
-		<hr>
+		<hr/>
 		<div class='container-fluid'>
 			<a id='index' class='btn btn-lg btn-primary btn-group' href='index.php'>About Me</a>
 			<a id='assignment' class='btn btn-lg btn-primary btn-group' href='assignments.php'>Assignments Page</a>
 		</div>
-		<hr>
+		<hr/>
 	</div>
 "
 );
