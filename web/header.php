@@ -1,3 +1,3 @@
-<?php  
-	print("hello world");
-?>
+<header>
+	<h1>Hello World!</h1>
+</header>
