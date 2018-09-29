@@ -1,7 +1,7 @@
 <?php
-
-print("	<header>
-			<h1>Hello World!</h1>
-		</header>
-		");
+"
+	<header>
+		<h1>Hello World!</h1>
+	</header>
+"
 ?>
