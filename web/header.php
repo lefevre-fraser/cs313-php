@@ -8,8 +8,8 @@ print(
 		<header>
 			<h1>Welcome to my Home... Page.</h1>
 		</header>
-		<div class='btn-group-lg'>
-			<a class='btn btn-lg'></a>
+		<div class='container-fluid'>
+			<a class='btn btn-lg btn-primary' href='index.php'>About Me</a>
 		</div>
 		<hr>
 	</div>
