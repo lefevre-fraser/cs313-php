@@ -19,8 +19,7 @@
 
             <div class="container-fluid">
                 <div class="container-fluid">
-                    <h3 class="h3">My Header</h3>
-                    <p id="intro" class="p-lg-3">My Body</p>
+                    <h3 class="h3">My CS 313 Assignments Page</h3>
                 </div>
             </div>
 
