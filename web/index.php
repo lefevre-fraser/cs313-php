@@ -30,7 +30,7 @@
 		    				<span class="indent-md"> * Playing Sports - not watching</span>
 		    			</p>
 		    			<div class="col-6 align-content-center">
-	    					<img src="pictures/MyWifeAndI.jpg" alt="My Wife And I" class="img-fluid intro">
+	    					<img src="pictures/MyWifeAndI.jpg" alt="My Wife And I" class="img-fluid">
 	    				</div>
 	    			</div>
 	    		</div>
