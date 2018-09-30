@@ -20,8 +20,8 @@
 	    	<div class="container-fluid">
 	    		<div class="container-fluid">
 	    			<h3 class="h3">A note&#9835; about myself:</h3>
-	    			<div class="container row flex-wrap">
-		    			<p id="intro" class="p-lg-3 col-6">
+	    			<div class="container row flex-wrap flex-row">
+		    			<p id="intro" class="p-lg-3 col-6 flex-column">
 		    				My name is Fraser LeFevre.<br/>
 		    				<span class="indent-sm">I was born in Las Vegas, Nevada, served a mission in Legazpi, Philippines, and then while going to school in Rexburg, Idaho, I met my wife, and married her in the Las Vegas, Nevada Temple. My wife and I are now continuing our education as on-campus BYU-Idaho students.</span><br/>
 		    				<span class="indent-sm">I have many hobbies, my favorite of which are:</span><br/>
@@ -29,7 +29,7 @@
 		    				<span class="indent-md"> * Snow Boarding</span><br/>
 		    				<span class="indent-md"> * Playing Sports - not watching</span>
 		    			</p>
-		    			<div class="col-6 align-content-center">
+		    			<div class="col-6 align-content-center flex-column">
 	    					<img src="pictures/MyWifeAndI.jpg" alt="My Wife And I" class="img-fluid intro">
 	    				</div>
 	    			</div>
