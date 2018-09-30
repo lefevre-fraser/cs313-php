@@ -14,3 +14,7 @@
 img.intro {
 	max-height: 300px;
 }
+
+span.tab-space {
+	padding-left: 5em;
+}
