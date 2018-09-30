@@ -12,7 +12,7 @@
 }
 
 img.intro {
-	max-height: 300px;
+	min-width: 400px;
 }
 
 span.indent-sm {
