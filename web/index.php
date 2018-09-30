@@ -19,7 +19,7 @@
 
 	    	<div class="container-fluid">
 	    		<div class="container-fluid">
-	    			<h3 class="h3">A note&#9835; about myself:</h3>
+	    			<h3 class="h3">A Note&#9835; About Myself:</h3>
 	    			<div class="container row flex-wrap flex-row">
 		    			<p id="intro" class="p-lg-3 col col-6 flex-column">
 		    				My name is Fraser LeFevre.<br/>
@@ -27,7 +27,7 @@
 		    				<span class="indent-sm">I have many hobbies, my favorite of which are:</span><br/>
 		    				<span class="indent-md"> * Horse Ridding</span><br/>
 		    				<span class="indent-md"> * Snow Boarding</span><br/>
-		    				<span class="indent-md"> * Playing Sports - not watching</span>
+		    				<span class="indent-md"> * Playing Sports</span>
 		    			</p>
 		    			<div class="col col-6 align-content-center flex-column">
 	    					<img src="pictures/MyWifeAndI.jpg" alt="My Wife And I" class="img-fluid intro">

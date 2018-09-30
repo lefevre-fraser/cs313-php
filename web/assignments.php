@@ -20,6 +20,7 @@
             <div class="container-fluid">
                 <div class="container-fluid">
                     <h3 class="h3">My CS 313 Assignments Page</h3>
+                    <p class="intro">Comming soon: My Assignments</p>
                 </div>
             </div>
 
