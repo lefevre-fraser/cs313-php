@@ -22,12 +22,12 @@
 	    			<h3 class="h3">A note&#9835; about myself:</h3>
 	    			<div class="container-fluid row">
 		    			<p id="intro" class="p-lg-3 col-6">
-		    				My name is Fraser LeFevre.<br/>
-		    				&#09;I was born in Las Vegas, Nevada, served a mission in Legazpi, Philippines, and then while going to school in Rexburg, Idaho, I met my wife, and married her in the Las Vegas, Nevada Temple. My wife and I are now continuing our education as on-campus BYU-Idaho students.<br/>
-		    				I have many hobbies, my favorite of which are:<br/>
-		    					&#09;* Horse Ridding<br/>
-		    					&#09;* Snow Boarding<br/>
-		    					&#09;* Playing Sports - not watching<br/>
+		    				My name is Fraser LeFevre.
+		    				<br/>&#09;I was born in Las Vegas, Nevada, served a mission in Legazpi, Philippines, and then while going to school in Rexburg, Idaho, I met my wife, and married her in the Las Vegas, Nevada Temple. My wife and I are now continuing our education as on-campus BYU-Idaho students.
+		    				<br/>&#09;I have many hobbies, my favorite of which are:
+		    				<br/>&#09; * Horse Ridding
+		    				<br/>&#09; * Snow Boarding
+		    				<br/>&#09; * Playing Sports - not watching
 		    			</p>
 		    			<div class="col-6 align-content-center">
 	    					<img src="pictures/MyWifeAndI.jpg" alt="My Wife And I" class="img-fluid intro">
