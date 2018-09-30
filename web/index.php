@@ -23,11 +23,11 @@
 	    			<div class="container-fluid row">
 		    			<p id="intro" class="p-lg-3 col-6">
 		    				My name is Fraser LeFevre.<br/>
-		    				<span class="indent">I was born in Las Vegas, Nevada, served a mission in Legazpi, Philippines, and then while going to school in Rexburg, Idaho, I met my wife, and married her in the Las Vegas, Nevada Temple. My wife and I are now continuing our education as on-campus BYU-Idaho students.</span><br/>
-		    				<span class="indent">I have many hobbies, my favorite of which are:</span><br/>
-		    				<span class="indent"> * Horse Ridding</span><br/>
-		    				<span class="indent"> * Snow Boarding</span><br/>
-		    				<span class="indent"> * Playing Sports - not watching</span>
+		    				<span class="indent-sm">I was born in Las Vegas, Nevada, served a mission in Legazpi, Philippines, and then while going to school in Rexburg, Idaho, I met my wife, and married her in the Las Vegas, Nevada Temple. My wife and I are now continuing our education as on-campus BYU-Idaho students.</span><br/>
+		    				<span class="indent-sm">I have many hobbies, my favorite of which are:</span><br/>
+		    				<span class="indent-md"> * Horse Ridding</span><br/>
+		    				<span class="indent-md"> * Snow Boarding</span><br/>
+		    				<span class="indent-md"> * Playing Sports - not watching</span>
 		    			</p>
 		    			<div class="col-6 align-content-center">
 	    					<img src="pictures/MyWifeAndI.jpg" alt="My Wife And I" class="img-fluid intro">

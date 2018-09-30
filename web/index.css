@@ -15,6 +15,10 @@ img.intro {
 	max-height: 300px;
 }
 
-span.indent {
+span.indent-sm {
 	padding-left: 2em;
+}
+
+span.indent-md {
+	padding-left: 4em;
 }
