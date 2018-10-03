@@ -14,7 +14,7 @@
 			<label>Computer Science</label>
 			<input type="radio" value="Web Design and Development" name="major">
 			<label>Web Design and Development</label>
-			<input type="radio" value="Computer Information Technology" name="major">\
+			<input type="radio" value="Computer Information Technology" name="major">
 			<label>Computer Information Technology</label>
 			<input type="radio" value="Computer Engineering" name="major">
 			<label>Computer Engineering</label>
