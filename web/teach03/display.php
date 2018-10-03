@@ -9,10 +9,10 @@
 
 	<?php
 
-		echo "Name:  " . $_POST["name"];
-		echo "Email: " . $_POST["email"];
-		echo "Major: " . $_POST["major"];
-		echo "Comments: " . $_POST["comments"];
+		echo "Name:  " . $_POST["name"] . "<br>";
+		echo "Email: " . $_POST["email"] . "<br>";
+		echo "Major: " . $_POST["major"] . "<br>";
+		echo "Comments: " . $_POST["comments"] . "<br>";
 
 
 
