@@ -12,10 +12,10 @@
 		echo "Name:  " . $_POST["name"] . "<br>";
 		echo "Email: " . "<a href='mailto:" . $_POST["email"] . "'>" . $_POST["email"] . "</a><br>";
 		echo "Major: " . $_POST["major"] . "<br>";
-		echo "Comments:";
+		echo "Comments:<br>";
 		echo $_POST["comments"] . "<br>";
 
-		echo "Continets:";
+		echo "Continets:<br>";
 		foreach ($_POST["continents"] as $key => $value) {
 			echo $value . "<br>";
 		}
