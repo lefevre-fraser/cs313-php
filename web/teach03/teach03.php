@@ -13,7 +13,7 @@
 			<?php
 				include("dictionary.php");
 
-				foreach ($major as $key => $value) {
+				foreach ($majors as $key => $value) {
 					print("<input type='radio' value='" . $key . "' name='major'>");
 					print("<label>" . $value . "</label>");
 				}
