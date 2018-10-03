@@ -22,17 +22,17 @@
 		<div>
 			<input type="checkbox" name="continents">
 			<label>North America</label>
-			<input type="checkbox" name="continents">
+			<input type="checkbox" name="continents[]">
 			<label>South America</label>
-			<input type="checkbox" name="continents">
+			<input type="checkbox" name="continents[]">
 			<label>Europe</label>
-			<input type="checkbox" name="continents">
+			<input type="checkbox" name="continents[]">
 			<label>Asia</label>
-			<input type="checkbox" name="continents">
+			<input type="checkbox" name="continents[]">
 			<label>Austrailia</label>
-			<input type="checkbox" name="continents">
+			<input type="checkbox" name="continents[]">
 			<label>Africa</label>
-			<input type="checkbox" name="continents">
+			<input type="checkbox" name="continents[]">
 			<label>Antartica</label>
 		</div>
 		<br><label>Comments</label><br>
