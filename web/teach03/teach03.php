@@ -29,7 +29,16 @@
 			<label>Computer Engineering</label> -->
 		</div>
 		<div>
-			<input type="checkbox" value="North America" name="continents">
+
+			<?php
+				// include("dictionary.php");
+
+				foreach ($continents as $key => $value) {
+					print("<input type='checkbox' value='" . $key . "' name='continents[]'>");
+					print("<label>" . $value . "</label>");
+				}
+			?>
+<!-- 			<input type="checkbox" value="North America" name="continents[]">
 			<label>North America</label>
 			<input type="checkbox" value="South America" name="continents[]">
 			<label>South America</label>
@@ -42,7 +51,7 @@
 			<input type="checkbox" value="Africa" name="continents[]">
 			<label>Africa</label>
 			<input type="checkbox" value="Antartica" name="continents[]">
-			<label>Antartica</label>
+			<label>Antartica</label> -->
 		</div>
 		<br><label>Comments</label><br>
 		<textarea name="comments"></textarea>
