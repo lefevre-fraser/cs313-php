@@ -10,7 +10,7 @@
 	<?php
 
 		echo "Name:  " . $_POST["name"] . "<br>";
-		echo "Email: " . $_POST["email"] . "<br>";
+		echo "Email: " . "<a href='mailto:" . $_POST["email"] . "'>EmailME:</a><br>";
 		echo "Major: " . $_POST["major"] . "<br>";
 		echo "Comments: " . $_POST["comments"] . "<br>";
 
