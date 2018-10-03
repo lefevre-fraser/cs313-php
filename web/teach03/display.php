@@ -15,7 +15,7 @@
 		echo "Comments: " . $_POST["comments"] . "<br>";
 
 
-		echo "Continets:<br>"
+		echo "Continets:<br>";
 		foreach ($_POST["continent"] as $key => $value) {
 			echo $value . "<br>:";
 		}
