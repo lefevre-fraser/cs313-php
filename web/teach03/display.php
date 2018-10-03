@@ -13,7 +13,7 @@
 		echo "Email: " . "<a href='mailto:" . $_POST["email"] . "'>" . $_POST["email"] . "</a><br>";
 		echo "Major: " . $_POST["major"] . "<br>";
 		echo "Comments:<br>";
-		echo $_POST["comments"] . "<br>";
+		echo $_POST["comments"] . "<br><br>";
 
 		echo "Continets:<br>";
 		foreach ($_POST["continents"] as $key => $value) {
