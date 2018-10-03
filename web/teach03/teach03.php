@@ -10,6 +10,15 @@
 		<input type="text=" name="email">
 		<label>Email</label><br><br>
 		<div>
+			<?php
+				include("dictionary.php");
+
+				foreach ($major as $key => $value) {
+					print("<input type='radio' value='" . $key . "' name='major'>");
+					print("<label>" . $value . "</label>");
+				}
+			?>
+<!-- 
 			<input type="radio" value="Computer Science" name="major">
 			<label>Computer Science</label>
 			<input type="radio" value="Web Design and Development" name="major">
@@ -17,7 +26,7 @@
 			<input type="radio" value="Computer Information Technology" name="major">
 			<label>Computer Information Technology</label>
 			<input type="radio" value="Computer Engineering" name="major">
-			<label>Computer Engineering</label>
+			<label>Computer Engineering</label> -->
 		</div>
 		<div>
 			<input type="checkbox" value="North America" name="continents">
