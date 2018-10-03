@@ -12,7 +12,7 @@
 		echo "Name:  " . $_POST["name"] . "<br>";
 		echo "Email: " . "<a href='mailto:" . $_POST["email"] . "'>" . $_POST["email"] . "</a><br>";
 		echo "Major: " . $_POST["major"] . "<br>";
-		echo "Comments:"
+		echo "Comments:";
 		echo $_POST["comments"] . "<br>";
 
 		echo "Continets:";
