@@ -16,7 +16,7 @@
 
 
 		echo "Continets:<br>";
-		foreach ($_POST["continent"] as $key => $value) {
+		foreach ($_POST["continents"] as $key => $value) {
 			echo $value . "<br>:";
 		}
 
