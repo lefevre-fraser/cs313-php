@@ -1,3 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+
+
 <?php
 
 	echo "Name:  " . $_POST["name"]
@@ -5,6 +14,9 @@
 	echo "Major: " . $_POST["major"]
 	echo "Comments: " . $_POST["comments"]
 
-	
+
 
 ?>
+
+</body>
+</html>
