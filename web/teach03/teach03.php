@@ -4,7 +4,7 @@
 	<title></title>
 </head>
 <body>
-	<form>
+	<form action="display.php" method="post">
 		<input type="text=" name="name">
 		<label>Name</label><br><br>
 		<input type="text=" name="email">
@@ -20,7 +20,9 @@
 			<label>Computer Engineering</label>
 		</div>
 		<br><label>Comments</label><br>
-		<textarea></textarea>
+		<textarea name="comments"></textarea>
+		<br>
+		<button type="submit">Submit</button>
 	</form>
 </body>
 </html>
