@@ -16,7 +16,7 @@
 </head>
 <body>
 
-	<div id="main_div">
+	<div id="main_div" class="container">
 
 		<?php
 		include 'header.php';

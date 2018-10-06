@@ -16,12 +16,21 @@
 </head>
 <body>
 
-	<div id="main_div">
+	<div id="main_div" class="container">
 
 		<?php
 		include 'header.php';
 		?>
 
+		<div class="col-1">
+			
+		</div>
+		<div class="col-8 list-group-item">
+			
+		</div>
+		<div class="col-1">
+			
+		</div>
 	</div>
 
 	<script>setActive('products')</script>
