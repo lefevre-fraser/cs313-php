@@ -12,7 +12,7 @@ print(
 		<div class='container-fluid'>
 			<a id='about' class='btn btn-lg btn-primary btn-group' href='about.php'>About Us</a>
 			<a id='products' class='btn btn-lg btn-primary btn-group' href='products.php'>Products</a>
-			<a id='cart' class='btn btn-lg btn-primary btn-group' href='products.php'>View Cart</a>
+			<a id='cart' class='btn btn-lg btn-primary btn-group' href='cart.php'>View Cart</a>
 		</div>
 		<hr/>
 	</div>

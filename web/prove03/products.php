@@ -12,6 +12,7 @@
     <link type="text/css" rel="stylesheet" href="prove03.css">
     
     <script src="prove03.js"></script> 
+    <script src="../shared/shared.js"></script> 
 </head>
 <body>
 
