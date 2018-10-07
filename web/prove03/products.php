@@ -1,3 +1,10 @@
+<?php 
+session_start();
+if (!isset($_SESSION['cart'])) {
+	$_SESSION['cart'] = array();
+}
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,13 +29,41 @@
 		include 'header.php';
 		?>
 
-		<div class="col-1">
-			
+		<div class="col-1 container-fluid">
+		
 		</div>
-		<div class="col-8 list-group-item">
-			
+		<div class="col-8 list-group-item container-fluid">
+			<?php
+			include 'dictionary.php';
+			?>
+
+			<div class="row">
+				<?php
+				foreach ($products as $key => $value) {
+					print(
+						"
+						<div class='col-4'>
+							<div class='padding-5'>
+								<div class='row'>
+<pre class='wrap'>
+$value->name
+$$value->price
+</pre>
+								</div>
+								<div class='row wrap'>
+									<img class='img-fluid' src='pictures/$value->pictureName'>
+								</div>
+								<br>
+								<button onclick='addToCart($key);' type='button' class='btn btn-sm btn-secondary'>Add to Cart</button>
+							</div>
+						</div>
+						"
+					);
+				}
+				?>
+			</div>
 		</div>
-		<div class="col-1">
+		<div class="col-1 container-fluid">
 			
 		</div>
 	</div>

@@ -1,9 +1,16 @@
+<?php 
+session_start();
+if (!isset($_SESSION['cart'])) {
+	$_SESSION['cart'] = array();
+}
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products Page</title>
+    <title>About Us</title>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 

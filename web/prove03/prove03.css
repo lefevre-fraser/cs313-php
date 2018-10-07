@@ -1,4 +1,14 @@
 #main_div {
 	background-color: lightblue;
 	border-radius: all;
+	padding-bottom: 20px; 
+}
+
+.padding-5 {
+	margin: 5px;
+}
+
+pre.wrap {
+	white-space: pre-wrap;
+	word-wrap: break-word;
 }
