@@ -1,3 +1,15 @@
 My Dog`3.50`mydog.jpg
 Humility`0.00`humility.jpg
 Basket Ball`4.50`basketball.jpg
+Horse`100.00`horse.jpg
+Watter Bottle`20.00`waterbottle.jpg
+Engagement Ring`1200.00`ring.jpg
+Cow`150.00`cow.jpg
+Pre Decorated Pumpkins`10.00`decoratedPumpkins.jpg
+Ghost Jugs`2.00`ghost.jpg
+Black Cat`2.50`blackcat.jpg
+Skeleton Bones`3.00`bones.jpg
+Dragon for Halloween`50.00`dragon.jpg
+Head Stone`4.00`headstone.jpg
+Mummies`5.00`mummies.jpg
+Witches Coven`15.00`witch.jpg

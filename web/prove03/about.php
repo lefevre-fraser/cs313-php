@@ -29,6 +29,13 @@ if (!isset($_SESSION['cart'])) {
 		include 'header.php';
 		?>
 
+		<div class="container-fluid">
+<pre class="wrap">
+The Garnish Shop is a site dedicated to helping people spice up their lives in a simple an cheap way.
+We want you to be able to "Garnish" your life without having to empty your pockets.
+</pre>
+		</div>
+
 	</div>
 
 	<script>setActive('about')</script>

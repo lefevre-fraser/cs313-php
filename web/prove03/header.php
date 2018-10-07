@@ -6,7 +6,7 @@ print(
 "
 	<div class='container-fluid'>
 		<header>
-			<h1>Garnish Shop</h1>
+			<h1>The Garnish Shop</h1>
 		</header>
 		<hr/>
 		<div class='container-fluid'>

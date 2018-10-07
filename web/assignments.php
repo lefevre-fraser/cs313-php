@@ -20,7 +20,12 @@
             <div class="container-fluid">
                 <div class="container-fluid">
                     <h3 class="h3">My CS 313 Assignments Page</h3>
-                    <p class="intro">Comming soon: My Assignments</p>
+                    <ul>
+                        <li><a href="hello.html">Hello World</a></li>
+                        <li><a href="teach02/teach02.html">Teach 02</a></li>
+                        <li><a href="teach03/teach03.php">Teach 03</a></li>
+                        <li><a href="prove03/products.php">Prove03 Assignment</a></li>
+                    </ul>
                 </div>
             </div>
 
