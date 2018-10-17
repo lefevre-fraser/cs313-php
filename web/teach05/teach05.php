@@ -1,3 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Scripture Resources</title>
+	<link rel="stylesheet" type="text/css" href="teach05.css">
+</head>
+<body>
+
+
 <?php
 
 try
@@ -15,6 +24,7 @@ try
   $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
 
   $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
 
   echo '<h1>Scripture Resources</h1>';
 
@@ -34,3 +44,7 @@ catch (PDOException $ex)
 
 
 ?>
+
+
+</body>
+</html>
