@@ -10,12 +10,5 @@
 		}
 	}
 
-	// echo $user_name;
-
-	// if (isset($user_name["user_id"])) {
-		// session_start();
-		// $_SESSION["user_name"] = $user_name["user_name"];
-	// }
-
-	// echo $_SESSION["user_name"];
+	return;
 ?>
