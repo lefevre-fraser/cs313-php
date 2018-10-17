@@ -1,3 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Scripture Resources</title>
+  <link rel="stylesheet" type="text/css" href="teach05.css">
+</head>
+<body>
+
 <?php
 
 try
@@ -42,3 +50,6 @@ catch (PDOException $ex)
       <button type="submit">Click Me</button>
     </form>
   </div>
+
+</body>
+</html>

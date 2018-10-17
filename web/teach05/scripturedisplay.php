@@ -1,3 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Scripture Resources</title>
+  <link rel="stylesheet" type="text/css" href="teach05.css">
+</head>
+<body>
+
+
 <?php
 
 try
@@ -34,3 +43,6 @@ catch (PDOException $ex)
 
 
 ?>
+
+</body>
+</html>
