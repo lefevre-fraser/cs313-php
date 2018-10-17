@@ -16,7 +16,7 @@ try
 
   $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-  echo '<h1>Scripture Resources</h1>';
+  echo '<h1>Scripture Details</h1>';
 
   foreach ($db->query("select content from scriptures where scripture_id = " . htmlspecialchars($_GET['id'])) as $row) {
   	echo '"' . $row["content"] . '"</p>';

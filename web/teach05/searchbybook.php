@@ -19,8 +19,8 @@ try
   echo '<h1>Scripture Resources</h1>';
 
   foreach ($db->query("select * from scriptures where book like '%" . htmlspecialchars($_POST['book']) . "%'") as $row) {
-  	echo "<p><span class='bold'>" . $row['book']  . " " . $row['chapter'] . ":" .$row['verse'] . " - </span>";
-  	echo '</p>';
+    echo "<a href='scripturedisplay.php?id=" . $row["scripture_id"] . "'><span class='bold'>" . $row['book']  . " " . $row['chapter'] . ":" .$row['verse'] . " - </span>";
+    echo '</a>';
   }
 
 
