@@ -26,7 +26,7 @@
                         <li><a href="teach03/teach03.php">Teach 03</a></li>
                         <li><a href="prove03/products.php">Prove03 Assignment</a></li>
                         <li><a href="teach05/searchbybook.php">Teach 05</a></li>
-                        <li><a href="AssetsTracker/AssetTracker.php">Asset Tracker: Final Project</a></li>
+                        <li><a href="AssetsTracking/AssetTracker.php">Asset Tracker: Final Project</a></li>
                     </ul>
                 </div>
             </div>
