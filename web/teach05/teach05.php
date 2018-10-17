@@ -16,17 +16,12 @@ try
 
   $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
+  echo '<h1>Scripture Resources</h1>';
 
   foreach ($db->query('select * from scriptures') as $row) {
-  	echo "<p><span>" . $row['book']  . " " . $row['chapter'] . ":" .$row['verse'] . " - </span>";
+  	echo "<p><span class='bold'>" . $row['book']  . " " . $row['chapter'] . ":" .$row['verse'] . " - </span>";
   	echo '"' . $row["content"] . '"</p>';
   }
-
-
-
-
-
-
 
 
 }
