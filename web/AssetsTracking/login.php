@@ -8,5 +8,5 @@
 		$_SESSION["user_name"] = $user_name["user_name"];
 	}
 
-	return;
+	echo $_SESSION["user_name"];
 ?>
