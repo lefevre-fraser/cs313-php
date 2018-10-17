@@ -25,7 +25,7 @@ else {
 
 echo 
 	'
-	<form action="login.php" post>
+	<form action="login.php" method="post">
 		<label>User Name:</label>
 		<input type="text=" size="40" name="user_name">
 	</form>	
