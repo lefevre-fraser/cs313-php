@@ -1,5 +1,5 @@
 <?php
-	include_once "DatabaseConnect.php"
+	include_once "DatabaseConnect.php";
 
 	$user_name = $db->query("select user_id from users where user_name = " . $_POST["user_name"]);
 
@@ -9,6 +9,7 @@
 	}
 
 	return;
+
 }
 catch (PDOException $ex)
 {
