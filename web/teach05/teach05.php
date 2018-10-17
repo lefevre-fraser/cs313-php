@@ -18,8 +18,8 @@ try
 
 
   foreach ($db->query('select * from scriptures') as $row) {
-  	echo '<p><span class="bold">$row["book"] $row["chapter"]:$row["verse"] -</span>';
-  	echo '"' . $row["content"] . '"';
+  	echo "<p><span class='bold'>$row['book'] $row['chapter']:$row['verse'] -</span>";
+  	echo '"' . $row["content"] . '"</p>';
   }
 
 
