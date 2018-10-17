@@ -8,14 +8,5 @@
 		$_SESSION["user_name"] = $user_name["user_name"];
 	}
 
-	echo $_SESSION["user_name"];
-
-}
-catch (PDOException $ex)
-{
-	echo 'Error!: ' . $ex->getMessage();
-	die();
-}
-
-
+	return;
 ?>
