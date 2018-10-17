@@ -18,7 +18,7 @@ try
 
 
   foreach ($db->query('select * from scriptures') as $row) {
-  	echo "<p><span>$row['book'] $row['chapter']:$row['verse'] -</span>";
+  	echo "<p><span>" . $row['book']  . " " . $row['chapter'] . ":" .$row['verse'] . " - </span>";
   	echo '"' . $row["content"] . '"</p>';
   }
 
