@@ -18,9 +18,8 @@ try
 
   echo '<h1>Scripture Resources</h1>';
 
-  foreach ($db->query("select * from scriptures where book like '%" . htmlspecialchars($_POST['book']) . "%'") as $row) {
-  	echo "<p><span class='bold'>" . $row['book']  . " " . $row['chapter'] . ":" .$row['verse'] . " - </span>";
-  	echo '</p>';
+  foreach ($db->query("select content from scriptures where scripture_id = " . htmlspecialchars($_GET['id'])) as $row) {
+  	echo '"' . $row["content"] . '"</p>';
   }
 
 
@@ -34,11 +33,3 @@ catch (PDOException $ex)
 
 
 ?>
-
-  <div>
-    <form action="searchbybook.php" method="post">
-      <label>Book</label>
-      <input type="text" name="book" placeholder="John">
-      <button type="submit">Click Me</button>
-    </form>
-  </div>
