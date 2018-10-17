@@ -20,7 +20,7 @@ try
 
   foreach ($db->query("select * from scriptures where book like '%" . htmlspecialchars($_POST['book']) . "%'") as $row) {
     echo "<a href='scripturedisplay.php?id=" . $row["scripture_id"] . "'><span class='bold'>" . $row['book']  . " " . $row['chapter'] . ":" .$row['verse'] . " - </span>";
-    echo '</a>';
+    echo '</a><br>';
   }
 
 

@@ -18,8 +18,9 @@ try
 
   echo '<h1>Scripture Details</h1>';
 
-  foreach ($db->query("select content from scriptures where scripture_id = " . htmlspecialchars($_GET['id'])) as $row) {
-  	echo '"' . $row["content"] . '"</p>';
+  foreach ($db->query("select * from scriptures where scripture_id = " . htmlspecialchars($_GET['id'])) as $row) {
+  	echo "<p><span class='bold'>" . $row['book']  . " " . $row['chapter'] . ":" .$row['verse'] . " - </span>";
+    echo '"' . $row["content"] . '"</p>';
   }
 
 

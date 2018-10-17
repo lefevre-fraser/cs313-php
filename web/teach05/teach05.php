@@ -29,7 +29,7 @@ try
 
   foreach ($db->query('select * from scriptures') as $row) {
   	echo "<a href='scripturedisplay.php?id=" . $row["scripture_id"] . "'><span class='bold'>" . $row['book']  . " " . $row['chapter'] . ":" .$row['verse'] . " - </span>";
-  	echo '</a>';
+  	echo '</a><br>';
   }
 
 
