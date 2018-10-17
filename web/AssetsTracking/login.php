@@ -3,6 +3,8 @@
 
 	$user_name = $db->query("select user_id from users where user_name = '" . $_POST["user_name"] . "'");
 
+	echo gettype($user_name);
+
 	// echo $user_name;
 
 	// if (isset($user_name["user_id"])) {
