@@ -39,5 +39,6 @@ catch (PDOException $ex)
     <form action="searchbybook.php" method="post">
       <label>Book</label>
       <input type="text" name="book" placeholder="John">
+      <button type="submit">Click Me</button>
     </form>
   </div>
