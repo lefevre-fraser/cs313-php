@@ -44,12 +44,13 @@ catch (PDOException $ex)
 
 ?>
 
-	<div>
-		<form action="searchbybook.php" method="post">
-			<label>Book</label>
-			<input type="text" name="book" placeholder="John">
-		</form>
-	</div>
+<div>
+    <form action="searchbybook.php" method="post">
+      <label>Book</label>
+      <input type="text" name="book" placeholder="John">
+      <button type="submit">Click Me</button>
+    </form>
+</div>
 
 
 </body>
