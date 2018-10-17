@@ -8,6 +8,7 @@
 		$_SESSION["user_name"] = $user_name["user_name"];
 	}
 
+	return;
 }
 catch (PDOException $ex)
 {

@@ -40,6 +40,9 @@ create table hashes
 insert into table_names values
 (	'HASHES');
 
+-- hashes sequence for adding new hashes
+create sequence hashes_s1 start with 1000;
+
 
 -- --------------------------------------------------------------
 -- Create Salts Table
@@ -55,6 +58,9 @@ create table salts
 insert into table_names values
 (	'SALTS');
 
+-- salts sequence for adding new salts
+create sequence salts_s1 start with 1000;
+
 
 -- --------------------------------------------------------------
 -- Create Area Codes Table
@@ -69,6 +75,9 @@ create table area_codes
 ,	creation_date date not null);
 insert into table_names values
 (	'AREA_CODES');
+
+-- area code sequence for adding new area codes
+create sequence area_codes_s1 start with 1000;
 
 
 -- --------------------------------------------------------------
@@ -132,3 +141,81 @@ insert into table_names values
 (	'USER_ASSETS');
 
 
+-- --------------------------------------------------------------
+-- Insert In Testing Data
+-- --------------------------------------------------------------
+insert into area_codes
+(	area_code_id
+,	area_code
+,	last_changed_by
+,	last_changed_date
+,	created_by
+,	creation_date)
+values
+(	nextval('area_codes_s1')
+,	'702'
+,	(select admin_user_id from admin_users where admin_user_name = 'SYSADMIN')
+,	current_date
+,	(select admin_user_id from admin_users where admin_user_name = 'SYSADMIN')
+,	current_date);
+
+insert into hashes
+(	hash_id
+,	hash_value
+,	last_changed_by
+,	last_changed_date
+,	created_by
+,	creation_date)
+values
+(	nextval('hashes_s1')
+,	20
+,	(select admin_user_id from admin_users where admin_user_name = 'SYSADMIN')
+,	current_date
+,	(select admin_user_id from admin_users where admin_user_name = 'SYSADMIN')
+,	current_date);
+
+insert into salts
+(	salt_id
+,	salt_value
+,	last_changed_by
+,	last_changed_date
+,	created_by
+,	creation_date)
+values
+(	nextval('salts_s1')
+,	5
+,	(select admin_user_id from admin_users where admin_user_name = 'SYSADMIN')
+,	current_date
+,	(select admin_user_id from admin_users where admin_user_name = 'SYSADMIN')
+,	current_date);
+
+insert into users
+(	user_id
+,	user_name
+,	fname
+,	mname
+,	lname
+,	area_code_id
+,	phone_number
+,	hash_id
+,	salt_id
+,	hashed_password
+,	last_changed_by
+,	last_changed_date
+,	created_by
+,	creation_date)
+values
+(	nextval('users_s1')
+,	'lefeve'
+,	'Fraser'
+,	'A'
+,	'LeFevre'
+,	(select area_code_id from area_codes where area_code = '702')
+,	'960-3038'
+,	(select hash_id from hashes where hash_value = 20)
+,	(select salt_id from salts where salt_value = 5)
+,	'SomeJunk'
+,	(select admin_user_id from admin_users where admin_user_name = 'SYSADMIN')
+,	current_date
+,	(select admin_user_id from admin_users where admin_user_name = 'SYSADMIN')
+,	current_date);

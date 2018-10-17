@@ -6,6 +6,7 @@ session_start();
 <html>
 <head>
 	<title>Asset Tracker</title>
+	<script type="text/javascript" src="AssetTracker.js"></script>
 </head>
 <body>
 
@@ -24,7 +25,7 @@ else {
 
 echo 
 	'
-	<form onsubmit="login()">
+	<form action="login.php">
 		<label>User Name:</label>
 		<input type="text=" size="40" name="user_name">
 	</form>	
