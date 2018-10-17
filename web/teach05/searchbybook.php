@@ -26,9 +26,18 @@ try
 
   echo '<h1>Scripture Resources</h1>';
 
-  foreach ($db->query("select * from scriptures where book like '%" . htmlspecialchars($_POST['book']) . "%'") as $row) {
-    echo "<a href='scripturedisplay.php?id=" . $row["scripture_id"] . "'><span class='bold'>" . $row['book']  . " " . $row['chapter'] . ":" .$row['verse'] . "</span>";
-    echo '</a><br>';
+  if (isset($_POST['book'])) {
+    foreach ($db->query("select * from scriptures where book like '%" . htmlspecialchars($_POST['book']) . "%'") as $row) {
+      echo "<a href='scripturedisplay.php?id=" . $row["scripture_id"] . "'><span class='bold'>" . $row['book']  . " " . $row['chapter'] . ":" .$row['verse'] . "</span>";
+      echo '</a><br>';
+    }
+  }
+  else {
+
+    foreach ($db->query('select * from scriptures') as $row) {
+      echo "<a href='scripturedisplay.php?id=" . $row["scripture_id"] . "'><span class='bold'>" . $row['book']  . " " . $row['chapter'] . ":" .$row['verse'] . "</span>";
+      echo '</a><br>';
+    }
   }
 
 
