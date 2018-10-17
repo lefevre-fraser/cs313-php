@@ -5,6 +5,10 @@
 
 	echo gettype($user_name);
 
+	foreach ($user_name as $row) {
+		echo $row["user_id"];
+	}
+
 	// echo $user_name;
 
 	// if (isset($user_name["user_id"])) {
