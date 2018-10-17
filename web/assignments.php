@@ -25,6 +25,7 @@
                         <li><a href="teach02/teach02.html">Teach 02</a></li>
                         <li><a href="teach03/teach03.php">Teach 03</a></li>
                         <li><a href="prove03/products.php">Prove03 Assignment</a></li>
+                        <li><a href="teach05/searchbybook.php">Prove05</a></li>
                     </ul>
                 </div>
             </div>
