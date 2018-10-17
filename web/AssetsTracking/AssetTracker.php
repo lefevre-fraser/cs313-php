@@ -6,8 +6,9 @@
 <body>
 
 <?php 
+session_start();
+
 if (isset($_SESSION["user_name"])) {
-	session_start();
 	echo "<h1>User Name: " . $_SESSION["user_name"] "</h1>";
 
 	include_once "DatabaseConnect.php";
