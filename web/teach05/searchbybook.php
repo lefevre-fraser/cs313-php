@@ -1,12 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Scripture Resources</title>
-	<link rel="stylesheet" type="text/css" href="teach05.css">
-</head>
-<body>
-
-
 <?php
 
 try
@@ -27,7 +18,7 @@ try
 
   echo '<h1>Scripture Resources</h1>';
 
-  foreach ($db->query('select * from scriptures') as $row) {
+  foreach ($db->query("select * from scriptures where book = " . htmlspecialchars($_POST['book'])) as $row) {
   	echo "<p><span class='bold'>" . $row['book']  . " " . $row['chapter'] . ":" .$row['verse'] . " - </span>";
   	echo '"' . $row["content"] . '"</p>';
   }
@@ -44,13 +35,9 @@ catch (PDOException $ex)
 
 ?>
 
-	<div>
-		<form action="searchbybook.php" method="post">
-			<label>Book</label>
-			<input type="text" name="book" placeholder="John">
-		</form>
-	</div>
-
-
-</body>
-</html>
+  <div>
+    <form action="searchbybook.php" method="post">
+      <label>Book</label>
+      <input type="text" name="book" placeholder="John">
+    </form>
+  </div>
