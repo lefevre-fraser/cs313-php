@@ -17,9 +17,16 @@ if (isset($_SESSION["user_name"])) {
 
 	include_once "DatabaseConnect.php";
 
-	// foreach ($db->query("select * from ") as $row) {
-	// 	# code...
-	// }
+	$queryString =  "select a.asset_name, ua.quantity, ua.asset_value";
+	$queryString += " from user_assets ua inner join assets a";
+	$queryString += " on ua.asset_id = a.asset_id";
+	$queryString += " where ua.user_id = " . $_SESSION["user_id"];
+
+	foreach ($db->query($queryString) as $row) {
+		echo "<p>Asset: " . $row["asset_name"] . "\n";
+		echo "Quantity: " . $row["quantity"] . "\n";
+		echo "Asset Value: " . $row["asset_value"] . "</p>";
+	}
 }
 else {
 
