@@ -25,11 +25,16 @@ if (isset($_SESSION["user_name"]) && isset($_SESSION['user_id'])) {
 
 	$user_assets = $db->query($queryString);
 
+	echo "<table><tr><th>Asset Name</th><th>Quantity</th><th>Unit Value</th><th>Total Value</th></tr>";
+
 	foreach ($user_assets as $row) {
-		echo "<p>Asset: " . $row["asset_name"] . "<br>";
-		echo "Quantity: " . $row["quantity"] . "<br>";
-		echo "Asset Value: " . $row["asset_value"] . "</p>";
+		echo "<tr><td>" . $row["asset_name"] . "</td>";
+		echo "<td>" . $row["quantity"] . "</td>";
+		echo "<td>" . $row["asset_value"] . "</td>";
+		echo "<td>" . ($row["quantity"] * $row["asset_value"]) . "</td></tr>";
 	}
+
+	echo "</table>";
 }
 else {
 
