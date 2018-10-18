@@ -22,7 +22,9 @@ if (isset($_SESSION["user_name"])) {
 	$queryString += " on ua.asset_id = a.asset_id";
 	$queryString += " where ua.user_id = " . $_SESSION["user_id"];
 
-	foreach ($db->query($queryString) as $row) {
+	$user_assets = $db->query($queryString);
+
+	foreach ($user_assets as $row) {
 		echo "<p>Asset: " . $row["asset_name"] . "\n";
 		echo "Quantity: " . $row["quantity"] . "\n";
 		echo "Asset Value: " . $row["asset_value"] . "</p>";
