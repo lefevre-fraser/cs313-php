@@ -26,8 +26,8 @@ if (isset($_SESSION["user_name"]) && isset($_SESSION['user_id'])) {
 	$user_assets = $db->query($queryString);
 
 	foreach ($user_assets as $row) {
-		echo "<p>Asset: " . $row["asset_name"] . "\n";
-		echo "Quantity: " . $row["quantity"] . "\n";
+		echo "<p>Asset: " . $row["asset_name"];
+		echo "Quantity: " . $row["quantity"];
 		echo "Asset Value: " . $row["asset_value"] . "</p>";
 	}
 }
