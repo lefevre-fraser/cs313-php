@@ -31,7 +31,7 @@ if (isset($_SESSION["user_name"]) && isset($_SESSION['user_id'])) {
 		echo "<tr><td>" . $row["asset_name"] . "</td>";
 		echo "<td>" . $row["quantity"] . "</td>";
 		echo "<td>" . $row["asset_value"] . "</td>";
-		$total = (preg_split(/$/, $row["asset_value"]))[1];
+		$total = (preg_split("/\$/", $row["asset_value"]))[1];
 		for ($i=1; $i < $row["quantity"]; $i++) { 
 			$total += (preg_split(/$/, $row["asset_value"]))[1];
 		}
