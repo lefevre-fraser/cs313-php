@@ -52,7 +52,7 @@ session_start();
 
 			echo "<tr><th class='row'>Total Asset Worth</th>";
 			echo "<td></td><td></td>";
-			echo "<td>" . $total . "</td></tr>";
+			echo "<td>$" . $total . "</td></tr>";
 			echo "</tbody></table>";
 		}
 		else {
