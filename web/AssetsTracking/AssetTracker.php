@@ -21,16 +21,14 @@ if (isset($_SESSION["user_name"]) && isset($_SESSION['user_id'])) {
 	$queryString =  "select a.asset_name, ua.quantity, ua.asset_value";
 	$queryString .= " from user_assets ua inner join assets a";
 	$queryString .= " on ua.asset_id = a.asset_id";
-	$queryString .= " where ua.user_id = ";
-	$queryString .= $_SESSION['user_id'];
+	$queryString .= " where ua.user_id = " . $_SESSION['user_id'];
 
 	$user_assets = $db->query($queryString);
 
 	foreach ($user_assets as $row) {
-		echo '<p>row</p>';
-		// echo "<p>Asset: " . $row["asset_name"] . "\n";
-		// echo "Quantity: " . $row["quantity"] . "\n";
-		// echo "Asset Value: " . $row["asset_value"] . "</p>";
+		echo "<p>Asset: " . $row["asset_name"] . "\n";
+		echo "Quantity: " . $row["quantity"] . "\n";
+		echo "Asset Value: " . $row["asset_value"] . "</p>";
 	}
 }
 else {
