@@ -31,13 +31,13 @@ if (isset($_SESSION["user_name"]) && isset($_SESSION['user_id'])) {
 		echo "<tr><td>" . $row["asset_name"] . "</td>";
 		echo "<td>" . $row["quantity"] . "</td>";
 		echo "<td>" . $row["asset_value"] . "</td>";
-		$total = $row["asset_value"];
+		$total = (preg_split(/$/, $row["asset_value"]))[1];
 		for ($i=1; $i < $row["quantity"]; $i++) { 
-			$total += $row["asset_value"];
+			$total += (preg_split(/$/, $row["asset_value"]))[1];
 		}
 
 
-		echo "<td>" . gettype($row["asset_value"]) . "</td></tr>";
+		echo "<td>$" . $total . "</td></tr>";
 	}
 
 	echo "</table>";
