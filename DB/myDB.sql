@@ -219,3 +219,37 @@ values
 ,	current_date
 ,	(select admin_user_id from admin_users where admin_user_name = 'SYSADMIN')
 ,	current_date);
+
+insert into assets
+(	asset_id
+,	asset_name
+,	last_changed_by
+,	last_changed_date
+,	created_by
+,	creation_date)
+values
+(	nextval('assets_s1')
+,	'Lap Top'
+,	(select admin_user_id from admin_users where admin_user_name = 'SYSADMIN')
+,	current_date
+,	(select admin_user_id from admin_users where admin_user_name = 'SYSADMIN')
+,	current_date);
+
+insert into user_assets
+(	user_id
+,	asset_id
+,	quantity
+,	asset_value
+,	last_changed_by
+,	last_changed_date
+,	created_by
+,	creation_date)
+values
+(	(select user_id from users where user_name = 'lefeve')
+,	(select asset_id from assets where asset_name = 'Lap Top')
+,	4
+,	500
+,	(select admin_user_id from admin_users where admin_user_name = 'SYSADMIN')
+,	current_date
+,	(select admin_user_id from admin_users where admin_user_name = 'SYSADMIN')
+,	current_date);
