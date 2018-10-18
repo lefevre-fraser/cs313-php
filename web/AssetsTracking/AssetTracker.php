@@ -37,7 +37,7 @@ if (isset($_SESSION["user_name"]) && isset($_SESSION['user_id'])) {
 		}
 
 
-		echo "<td>" . $total . "</td></tr>";
+		echo "<td>" . gettype($row["asset_value"]) . "</td></tr>";
 	}
 
 	echo "</table>";
