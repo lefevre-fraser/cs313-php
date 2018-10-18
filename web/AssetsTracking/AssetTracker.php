@@ -32,10 +32,10 @@ if (isset($_SESSION["user_name"]) && isset($_SESSION['user_id'])) {
 		echo "<td>" . $row["quantity"] . "</td>";
 		echo "<td>" . $row["asset_value"] . "</td>";
 		$money = preg_split("/\$/", $row["asset_value"]);
-		$total = $money[1];
+		$total = $money[0];
 		for ($i=1; $i < $row["quantity"]; $i++) { 
 			$money = preg_split("/\$/", $row["asset_value"]);
-			$total += $money[1];
+			$total += $money[0];
 		}
 
 
