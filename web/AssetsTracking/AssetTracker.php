@@ -12,7 +12,7 @@ session_start();
 
 <?php 
 
-if (isset($_SESSION["user_name"])) {
+if (isset($_SESSION["user_name"]) && isset($_SESSION['user_id'])) {
 	echo "<h1>User Name: " . $_SESSION["user_name"] . "</h1>";
 
 	include_once "DatabaseConnect.php";
@@ -20,7 +20,7 @@ if (isset($_SESSION["user_name"])) {
 	$queryString =  "select a.asset_name, ua.quantity, ua.asset_value";
 	$queryString += " from user_assets ua inner join assets a";
 	$queryString += " on ua.asset_id = a.asset_id";
-	$queryString += " where ua.user_id = $_SESSION['user_id']";
+	$queryString += " where ua.user_id = " . $_SESSION['user_id'];
 
 	$user_assets = $db->query($queryString);
 
@@ -32,13 +32,13 @@ if (isset($_SESSION["user_name"])) {
 }
 else {
 
-echo 
-	'
-	<form action="login.php" method="post">
-		<label>User Name:</label>
-		<input type="text=" size="40" name="user_name">
-	</form>	
-	';
+	echo 
+		'
+		<form action="login.php" method="post">
+			<label>User Name:</label>
+			<input type="text=" size="40" name="user_name">
+		</form>	
+		';
 }
 
 ?>
