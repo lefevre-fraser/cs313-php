@@ -132,7 +132,7 @@ create table user_assets
 (	user_id integer references users(user_id)
 ,	asset_id integer references assets(asset_id)
 ,	quantity integer not null
-,	asset_value money not null
+,	asset_value bigint not null
 ,	last_changed_by integer references admin_users(admin_user_id)
 ,	last_changed_date date not null
 ,	created_by integer references admin_users(admin_user_id)
