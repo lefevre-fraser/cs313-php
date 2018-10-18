@@ -31,7 +31,13 @@ if (isset($_SESSION["user_name"]) && isset($_SESSION['user_id'])) {
 		echo "<tr><td>" . $row["asset_name"] . "</td>";
 		echo "<td>" . $row["quantity"] . "</td>";
 		echo "<td>" . $row["asset_value"] . "</td>";
-		echo "<td>" . ($row["quantity"] * $row["asset_value"]) . "</td></tr>";
+		$total = $row["quantity"];
+		for ($i=1; $i < $row["quantity"]; $i++) { 
+			$total += $row["quantity"];
+		}
+
+
+		echo "<td>" . $total . "</td></tr>";
 	}
 
 	echo "</table>";
