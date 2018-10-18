@@ -22,6 +22,7 @@ session_start();
 
 		if (isset($_SESSION["user_name"]) && isset($_SESSION['user_id'])) {
 			echo "<h1>User Name: " . $_SESSION["user_name"] . "</h1>";
+			echo "<a href='logout.php' class='btn'>Log Out</a>";
 
 			include("DatabaseConnect.php");
 

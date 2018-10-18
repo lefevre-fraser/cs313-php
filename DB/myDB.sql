@@ -136,7 +136,8 @@ create table user_assets
 ,	last_changed_by integer references admin_users(admin_user_id)
 ,	last_changed_date date not null
 ,	created_by integer references admin_users(admin_user_id)
-,	creation_date date not null);
+,	creation_date date not null
+,	primary key (user_id, asset_id, asset_value));
 insert into table_names values
 (	'USER_ASSETS');
 
@@ -253,3 +254,4 @@ values
 ,	current_date
 ,	(select admin_user_id from admin_users where admin_user_name = 'SYSADMIN')
 ,	current_date);
+
