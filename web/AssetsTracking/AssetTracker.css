@@ -1,5 +1,5 @@
 th, td {
 	border: solid black 1px;
-	border-collapse: collapse;
+	border-collapse: all;
 	padding: 3px;
 }
