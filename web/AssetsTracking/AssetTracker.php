@@ -40,13 +40,19 @@ session_start();
 			echo "<th class='col'>Total Value</th>";
 			echo "</tr></thead><tbody>";
 
+			$total = 0;
+
 			foreach ($user_assets as $row) {
 				echo "<tr><th class='row'>" . $row["asset_name"] . "</th>";
 				echo "<td>" . $row["quantity"] . "</td>";
 				echo "<td>$" . $row["asset_value"] . "</td>";
 				echo "<td>$" . ($row["quantity"] * $row["asset_value"]) . "</td></tr>";
+				$total += ($row["quantity"] * $row["asset_value"]);
 			}
 
+			echo "<tr><th class='row'>Total Asset Worth</th>";
+			echo "<td></td><td></td>";
+			echo "<td>" . $total . "</td></tr>";
 			echo "</tbody></table>";
 		}
 		else {
