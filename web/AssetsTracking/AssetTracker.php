@@ -14,7 +14,6 @@ session_start();
 
 if (isset($_SESSION["user_name"]) && isset($_SESSION['user_id'])) {
 	echo "<h1>User Name: " . $_SESSION["user_name"] . "</h1>";
-	echo "<h1>User ID: " . $_SESSION["user_id"] . "</h1>";
 
 	include("DatabaseConnect.php");
 
