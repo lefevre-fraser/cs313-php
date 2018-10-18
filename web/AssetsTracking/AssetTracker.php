@@ -6,6 +6,7 @@ session_start();
 <html>
 <head>
 	<title>Asset Tracker</title>
+	<link rel="stylesheet" type="text/css" href="AssetTracker.css">
 	<script type="text/javascript" src="AssetTracker.js"></script>
 </head>
 <body>
