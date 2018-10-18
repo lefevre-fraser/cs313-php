@@ -3,3 +3,7 @@ th, td {
 	border-collapse: all;
 	padding: 3px;
 }
+
+table {
+	border-collapse: all;
+}
