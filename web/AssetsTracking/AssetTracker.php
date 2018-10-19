@@ -77,6 +77,10 @@ session_start();
 
 	?>
 
+	<script type="text/javascript">
+		setActive('tracker');
+	</script>
+
 	<?php 
 	include_once("BootStrapFooter.php"); 
 	echo $BootStrapFooter;

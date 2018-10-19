@@ -48,6 +48,10 @@ session_start();
 
 	?>
 
+	<script type="text/javascript">
+		setActive('insert');
+	</script>
+
 	<?php 
 	include_once("BootStrapFooter.php"); 
 	echo $BootStrapFooter;
