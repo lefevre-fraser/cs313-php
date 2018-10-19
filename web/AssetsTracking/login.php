@@ -1,5 +1,5 @@
 <?php
-	include("DatabaseConnect.php");
+	include_once("DatabaseConnect.php");
 
 	$queryString  = "select s.salt_value";
 	$queryString .= " from salts s inner join users u";
