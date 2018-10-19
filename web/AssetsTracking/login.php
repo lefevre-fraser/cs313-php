@@ -1,7 +1,23 @@
 <?php
 	include("DatabaseConnect.php");
 
-	$user_name = $db->query("select user_name, user_id, fname, lname, mname from users where user_name = '" . $_POST["user_name"] . "'");
+	$queryString  = "select s.salt_value";
+	$queryString .= " from salts s inner join users u";
+	$queryString .= " on s.salt_id = u.salt_id";
+	$queryString .= " where u.user_name = '" . $_POST["user_name"] . "'";
+
+	$salt = $db->query($queryString);
+	$options = [ 'cost' => 8, 'salt' => $salt];
+
+	$password = password_hash($_POST["password"], $options);
+
+	$queryString =  "select user_name, user_id, fname, lname, mname";
+	$queryString .= " from users";
+	$queryString .= " where user_name = '" . $_POST["user_name"] . "'";
+	$queryString .= " and hashed_password = '" . $password . "'";
+
+
+	$user_name = $db->query($queryString);
 
 	foreach ($user_name as $row) {
 		if (isset($row["user_name"])) {
@@ -13,6 +29,10 @@
 				$_SESSION["full_name"] .= " " . $row["mname"];
 			}
 			$_SESSION["full_name"] .= " " . $row["lname"];
+
+			$_SESSION["login"] = 1;
+		} else {
+			$_SESSION["login"] = 0;
 		}
 	}
 

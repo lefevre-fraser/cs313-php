@@ -27,30 +27,12 @@ values
 
 
 -- --------------------------------------------------------------
--- Create Hash Table
---	then add the table name to table_names
--- --------------------------------------------------------------
-create table hashes
-(	hash_id integer primary key
-,	hash_value integer not null
-,	last_changed_by integer references admin_users(admin_user_id)
-,	last_changed_date date not null
-,	created_by integer references admin_users(admin_user_id)
-,	creation_date date not null);
-insert into table_names values
-(	'HASHES');
-
--- hashes sequence for adding new hashes
-create sequence hashes_s1 start with 1000;
-
-
--- --------------------------------------------------------------
 -- Create Salts Table
 --	then add the table name to table_names
 -- --------------------------------------------------------------
 create table salts
 (	salt_id integer primary key
-,	salt_value integer not null
+,	salt_value text not null
 ,	last_changed_by integer references admin_users(admin_user_id)
 ,	last_changed_date date not null
 ,	created_by integer references admin_users(admin_user_id)
@@ -92,9 +74,8 @@ create table users
 ,	lname varchar(40) not null
 ,	area_code_id integer references area_codes(area_code_id)
 ,	phone_number varchar(8) not null
-,	hash_id integer references hashes(hash_id)
 ,	salt_id integer references salts(salt_id)
-,	hashed_password varchar(50) not null
+,	hashed_password text not null
 ,	last_changed_by integer references admin_users(admin_user_id)
 ,	last_changed_date date not null
 ,	created_by integer references admin_users(admin_user_id)
@@ -160,21 +141,6 @@ values
 ,	(select admin_user_id from admin_users where admin_user_name = 'SYSADMIN')
 ,	current_date);
 
-insert into hashes
-(	hash_id
-,	hash_value
-,	last_changed_by
-,	last_changed_date
-,	created_by
-,	creation_date)
-values
-(	nextval('hashes_s1')
-,	20
-,	(select admin_user_id from admin_users where admin_user_name = 'SYSADMIN')
-,	current_date
-,	(select admin_user_id from admin_users where admin_user_name = 'SYSADMIN')
-,	current_date);
-
 insert into salts
 (	salt_id
 ,	salt_value
@@ -184,7 +150,7 @@ insert into salts
 ,	creation_date)
 values
 (	nextval('salts_s1')
-,	5
+,	'5doasdlvua;asnfeuyjvlaksdyvq0w9e798welkbca7'
 ,	(select admin_user_id from admin_users where admin_user_name = 'SYSADMIN')
 ,	current_date
 ,	(select admin_user_id from admin_users where admin_user_name = 'SYSADMIN')
@@ -198,7 +164,6 @@ insert into users
 ,	lname
 ,	area_code_id
 ,	phone_number
-,	hash_id
 ,	salt_id
 ,	hashed_password
 ,	last_changed_by
@@ -213,9 +178,8 @@ values
 ,	'LeFevre'
 ,	(select area_code_id from area_codes where area_code = '702')
 ,	'960-3038'
-,	(select hash_id from hashes where hash_value = 20)
-,	(select salt_id from salts where salt_value = 5)
-,	'SomeJunk'
+,	1000
+,	'$2y$08$NWRvYXNkbHZ1YTthc25mZOc5GiQvbMkRgQhkcU8e7FgP5fKS2nDTO'
 ,	(select admin_user_id from admin_users where admin_user_name = 'SYSADMIN')
 ,	current_date
 ,	(select admin_user_id from admin_users where admin_user_name = 'SYSADMIN')

@@ -72,8 +72,10 @@ session_start();
 			echo 
 				'
 				<form action="login.php" method="post">
-					<label>User Name:</label>
-					<input type="text=" size="40" name="user_name">
+					<label>User Name:</label><br>
+					<input type="text=" size="40" name="user_name"><br>
+					<label>Password:</label><br>
+					<input type="text=" size="40" name="password">
 				</form>	
 				';
 		}

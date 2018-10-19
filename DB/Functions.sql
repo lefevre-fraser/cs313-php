@@ -4,9 +4,8 @@ create or replace function insert_user
 ,	f_lname varchar(40)
 ,	f_area_code varchar(3)
 ,	f_phone_number varchar(8)
-,	f_hash_id integer
 ,	f_salt_id integer
-,	f_hashed_password varchar(50)
+,	f_hashed_password text
 ,	f_mname varchar(40) default null
 )
 returns text as $$
@@ -40,7 +39,6 @@ BEGIN
 	,	lname
 	,	area_code_id
 	,	phone_number
-	,	hash_id
 	,	salt_id
 	,	hashed_password
 	,	last_changed_by
@@ -55,7 +53,6 @@ BEGIN
 	,	f_lname
 	,	(select area_code_id from area_codes where area_code = f_area_code)
 	,	f_phone_number
-	,	(select hash_id from hashes where hash_id = f_hash_id)
 	,	(select salt_id from salts where salt_id = f_salt_id)
 	,	f_hashed_password
 	,	(select admin_user_id from admin_users where admin_user_name = 'SYSADMIN')

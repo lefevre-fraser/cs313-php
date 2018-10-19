@@ -5,11 +5,9 @@ select insert_user
 ,	'702'
 ,	'960-3038'
 ,	1000
-,	1000
-,	'Random Dancing'
+,	'$2y$08$NWRvYXNkbHZ1YTthc25mZOc5GiQvbMkRgQhkcU8e7FgP5fKS2nDTO'
 ,	'A'
 );
-
 
 select insert_asset
 (	'LeFeve'
@@ -39,8 +37,7 @@ select insert_user
 ,	'702'
 ,	'960-3038'
 ,	1000
-,	1000
-,	'Random Dancing'
+,	'$2y$08$NWRvYXNkbHZ1YTthc25mZOc5GiQvbMkRgQhkcU8e7FgP5fKS2nDTO'
 ,	'A'
 );
 
@@ -100,6 +97,19 @@ select insert_user
 ,	'702'
 ,	'960-3038'
 ,	1000
-,	1000
-,	'Random Dancing'
+,	'$2y$08$NWRvYXNkbHZ1YTthc25mZOc5GiQvbMkRgQhkcU8e7FgP5fKS2nDTO'
+);
+
+select insert_asset
+(	'FallBoy'
+,	1
+,	40
+,	'Couch'
+);
+
+select insert_asset
+(	'FallBoy'
+,	1
+,	100
+,	'Computer'
 );
