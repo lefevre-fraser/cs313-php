@@ -7,10 +7,7 @@ session_start();
 <head>
 	<title>Asset Tracker</title>
 
-	<?php 
-	include_once("BootStrapHeader.php"); 
-	echo $BootStrapHeader;
-	?>
+	<?php include_once("BootStrapHeader.php"); ?>
 
 	<link rel="stylesheet" type="text/css" href="AssetTracker.css">
 	<script type="text/javascript" src="AssetTracker.js"></script>
@@ -20,9 +17,13 @@ session_start();
 
 		<?php 
 
-		if (isset($_SESSION["login"]) && $_SESSION["login"] == 1)) {
-			include_once("header.php");
-			echo $header;
+		if (isset($_SESSION["login"]) && $_SESSION["login"])) {
+			echo '<div id="main_div" class="container">';
+
+			echo "<h1>Name: " . $_SESSION["full_name"] . "</h1>";
+			echo "<a href='logout.php' class='btn btn-secondary'>Log Out</a>";
+
+			echo "<br><hr>";
 
 			echo "<form action='AssetTracker.php' method='post'>";
 			echo "<label>Search by Asset Name:</label><br>";
@@ -84,10 +85,7 @@ session_start();
 
 	</div>
 
-	<?php 
-	include_once("BootStrapFooter.php"); 
-	echo $BootStrapFooter;
-	?>
+	<?php include_once("BootStrapFooter.php"); ?>
 
 </body>
 </html>
