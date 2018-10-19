@@ -78,6 +78,10 @@ session_start();
 					<button type="submit" class="btn btn-block">Login</button>
 				</form>	
 				</div>';
+
+			if (isset($_SESSION["login"]) && !$_SESSION["login"]) {
+				echo "<script>alert('Unable to Login with Provided Credentials')</script>";
+			}
 		}
 
 		?>
