@@ -43,7 +43,7 @@ session_start();
 				$queryString .= " and UPPER(a.asset_name) like '%" . strtoupper($_POST["search_context"]) . "%'";
 			}
 
-			$user_assets .= $db->query($queryString);
+			$user_assets = $db->query($queryString);
 
 			echo "<table class='table'><thead><tr>";
 			echo "<th class='col'>Asset Name</th>";
