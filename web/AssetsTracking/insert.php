@@ -10,7 +10,7 @@ $queryString .= ", " . $_POST["asset_value"];
 $queryString .= ", '" . $_POST["asset_name"] . "'";
 $queryString .= ")";
 
-$db->query($queryString);
+$completed = $db->query($queryString);
 
 header("Location: AssetInsertForm.php");
 exit;
