@@ -25,8 +25,8 @@ session_start();
 			echo "<a href='logout.php' class='btn btn-secondary'>Log Out</a>";
 
 			echo "<form action='AssetTracker.php' method='post'>";
-			echo "<label>Search by Asset Name:</label>";
-			echo "<input name='search_context' type='text' placeholder='Couch'><br>";
+			echo "<label>Search by Asset Name:</label><br>";
+			echo "<input name='search_context' type='text' placeholder='Couch'>";
 			echo "<button type='submit'>Search</button>";
 			echo "</form>";
 

@@ -71,3 +71,24 @@ select insert_asset
 ,	100
 ,	'Table'
 );
+
+select insert_asset
+(	'Feves'
+,	1
+,	100
+,	'Couch'
+);
+
+select insert_asset
+(	'LeFeve'
+,	1
+,	80
+,	'Couch'
+);
+
+select insert_asset
+(	'lefeve'
+,	1
+,	50
+,	'Couch'
+);
