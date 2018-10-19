@@ -75,7 +75,7 @@ session_start();
 					<label>User Name:</label><br>
 					<input type="text=" size="40" name="user_name"><br>
 					<label>Password:</label><br>
-					<input type="text=" size="40" name="password">
+					<input type="text=" size="40" name="password"><br>
 					<button type="submit">Login</button>
 				</form>	
 				';

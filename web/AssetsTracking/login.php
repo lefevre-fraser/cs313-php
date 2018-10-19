@@ -7,7 +7,7 @@
 	$queryString .= " where u.user_name = '" . $_POST["user_name"] . "'";
 
 	$salt = $db->query($queryString);
-	$options = [ 'cost' => 8, 'salt' => $salt];
+	$options = [ 'cost' => 8, 'salt' => $salt[0]["salt_value"]];
 
 	$password = password_hash($_POST["password"], $options);
 
