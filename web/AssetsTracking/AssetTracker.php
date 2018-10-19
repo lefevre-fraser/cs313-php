@@ -24,12 +24,22 @@ session_start();
 			echo "<h1>User Name: " . $_SESSION["user_name"] . "</h1>";
 			echo "<a href='logout.php' class='btn'>Log Out</a>";
 
+			echo "<form action='AssetTracker.php' method='post'>";
+			echo "<label>Search by Asset Name:</label>";
+			echo "<input name='search_context' type='text'>";
+			echo "<button type='submit'>Search</button>";
+			echo "</form>";
+
 			include("DatabaseConnect.php");
 
 			$queryString =  "select a.asset_name, ua.quantity, ua.asset_value";
 			$queryString .= " from user_assets ua inner join assets a";
 			$queryString .= " on ua.asset_id = a.asset_id";
 			$queryString .= " where ua.user_id = " . $_SESSION['user_id'];
+
+			if (isset($_POST["search_context"])) {
+				$queryString .= " and UPPER(a.asset_name) like '%" . strtoupper($_POST["search_context"]) . "%'";
+			}
 
 			$user_assets = $db->query($queryString);
 
