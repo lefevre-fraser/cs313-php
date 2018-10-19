@@ -18,7 +18,8 @@ session_start();
 		<?php 
 
 		if (isset($_SESSION["login"]) && $_SESSION["login"])) {
-			echo include_once("header.php");
+			include_once("header.php");
+			echo $header;
 
 			echo "<form action='AssetTracker.php' method='post'>";
 			echo "<label>Search by Asset Name:</label><br>";
