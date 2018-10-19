@@ -12,7 +12,7 @@
 			if (isset($row["mname"])) {
 				$_SESSION["full_name"] .= " " . $row["mname"];
 			}
-			$_SESSION["full_name"] .= $row["lname"];
+			$_SESSION["full_name"] .= " " . $row["lname"];
 		}
 	}
 

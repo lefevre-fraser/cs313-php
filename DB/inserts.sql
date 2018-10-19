@@ -92,3 +92,14 @@ select insert_asset
 ,	50
 ,	'Couch'
 );
+
+select insert_user 
+(	'FallBoy'
+,	'Fraser'
+,	'LeFevre'
+,	'702'
+,	'960-3038'
+,	1000
+,	1000
+,	'Random Dancing'
+);
