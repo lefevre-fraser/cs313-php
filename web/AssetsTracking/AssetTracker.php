@@ -22,11 +22,11 @@ session_start();
 
 		if (isset($_SESSION["user_name"]) && isset($_SESSION['user_id'])) {
 			echo "<h1>User Name: " . $_SESSION["user_name"] . "</h1>";
-			echo "<a href='logout.php' class='btn'>Log Out</a>";
+			echo "<a href='logout.php' class='btn btn-secondary'>Log Out</a>";
 
 			echo "<form action='AssetTracker.php' method='post'>";
 			echo "<label>Search by Asset Name:</label>";
-			echo "<input name='search_context' type='text'>";
+			echo "<input name='search_context' type='text' placeholder='Couch'><br>";
 			echo "<button type='submit'>Search</button>";
 			echo "</form>";
 

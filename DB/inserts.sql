@@ -57,3 +57,17 @@ select change_quantity
 ,	100
 ,	2
 );
+
+select insert_asset
+(	'Feves'
+,	1
+,	100
+,	'Various Legos'
+);
+
+select insert_asset
+(	'Feves'
+,	1
+,	100
+,	'Table'
+);
