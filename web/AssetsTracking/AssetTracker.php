@@ -16,11 +16,12 @@ session_start();
 </head>
 <body>
 
-	<div id="main_div" class="container-fluid">
 
 		<?php 
 
 		if (isset($_SESSION["user_name"]) && isset($_SESSION['user_id'])) {
+			echo '<div id="main_div" class="container-fluid">';
+
 			echo "<h1>Name: " . $_SESSION["full_name"] . "</h1>";
 			echo "<a href='logout.php' class='btn btn-secondary'>Log Out</a>";
 
@@ -68,9 +69,10 @@ session_start();
 			echo "</tbody></table>";
 		}
 		else {
+			echo '<div id="main_div" class="container-fluid align-content-center align-items-center">';
 
 			echo 
-				'
+				'<div class="align-content-center align-items-center">
 				<form action="login.php" method="post">
 					<label>User Name:</label><br>
 					<input type="text=" size="40" name="user_name"><br>
@@ -78,7 +80,7 @@ session_start();
 					<input type="text=" size="40" name="password"><br><br>
 					<button type="submit">Login</button>
 				</form>	
-				';
+				</div>';
 		}
 
 		?>
