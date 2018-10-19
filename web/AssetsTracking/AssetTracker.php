@@ -21,7 +21,7 @@ session_start();
 		<?php 
 
 		if (isset($_SESSION["user_name"]) && isset($_SESSION['user_id'])) {
-			echo "<h1>User Name: " . $_SESSION["user_name"] . "</h1>";
+			echo "<h1>Name: " . $_SESSION["full_name"] . "</h1>";
 			echo "<a href='logout.php' class='btn btn-secondary'>Log Out</a>";
 
 			echo "<br><hr>";
