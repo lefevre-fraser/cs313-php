@@ -79,8 +79,8 @@ session_start();
 				</form>	
 				</div>';
 
-			if (isset($_SESSION["login"]) && !($_SESSION["login"])) {
-				echo "<script>alert('Unable to Login with Provided Credentials')</script>";
+			if (isset($_SESSION["login"]) && ($_SESSION["login"] == 0)) {
+				echo "<script type='text/javascript'>window.alert('Unable to Login with Provided Credentials')</script>";
 			}
 		}
 
