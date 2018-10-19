@@ -17,7 +17,7 @@ session_start();
 
 		<?php 
 
-		if (isset($_SESSION["login"]) && $_SESSION["login"])) {
+		if (isset($_SESSION["login"]) && $_SESSION["login"] == 1)) {
 			include_once("header.php");
 			echo $header;
 
