@@ -25,7 +25,16 @@ session_start();
 		include_once("header.php");
 		echo $header;
 
-
+		echo '<div class="container h-100 d-flex justify-content-center">';
+		echo '<form action="insert.php" method="post">';
+		echo '<label>Asset Name:</label><br>';
+		echo '<input type="text" name="asset_name" placeholder="Couch"><br>';
+		echo '<label>Quantity:</label><br>';
+		echo '<input type="number" name="quantity" value="1"><br>';
+		echo '<label>Unit Value:</label><br>';
+		echo '<input type="number" name="asset_value" placeholder="20">';
+		echo '</form>';
+		echo '</div>';
 
 		echo "</div>";
 	}
