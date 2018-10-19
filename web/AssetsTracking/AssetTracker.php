@@ -80,7 +80,7 @@ session_start();
 					<label>User Name:</label><br>
 					<input type="text=" size="40" name="user_name"><br>
 					<label>Password:</label><br>
-					<input type="password=" size="40" name="password"><br><br>
+					<input type="password" size="40" name="password"><br><br>
 					<button type="submit" class="btn btn-block">Login</button>
 				</form>	
 				</div>';
