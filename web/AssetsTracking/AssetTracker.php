@@ -17,13 +17,8 @@ session_start();
 
 		<?php 
 
-		if (isset($_SESSION["user_name"]) && isset($_SESSION['user_id'])) {
-			echo '<div id="main_div" class="container">';
-
-			echo "<h1>Name: " . $_SESSION["full_name"] . "</h1>";
-			echo "<a href='logout.php' class='btn btn-secondary'>Log Out</a>";
-
-			echo "<br><hr>";
+		if (isset($_SESSION["login"]) && $_SESSION["login"])) {
+			include_once("header.php");
 
 			echo "<form action='AssetTracker.php' method='post'>";
 			echo "<label>Search by Asset Name:</label><br>";
