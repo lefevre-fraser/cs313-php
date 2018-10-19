@@ -11,4 +11,7 @@ $queryString .= ", " . $_POST["asset_name"];
 $queryString .= ")";
 
 $db->query($queryString);
+
+header("Location: AssetInsertForm.php");
+exit;
 ?>
