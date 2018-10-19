@@ -32,7 +32,7 @@ session_start();
 		echo '<label>Quantity:</label><br>';
 		echo '<input type="number" name="quantity" value="1"><br>';
 		echo '<label>Unit Value:</label><br>';
-		echo '<input type="number" name="asset_value" placeholder="20">';
+		echo '<input type="number" name="asset_value" placeholder="20"><br>';
 		echo '<button type="submit" class="btn btn-block">Add Item To Assets</button>';
 		echo '</form>';
 		echo '</div>';
