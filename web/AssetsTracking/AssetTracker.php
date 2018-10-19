@@ -9,7 +9,7 @@ session_start();
 
 	<?php 
 	include_once("BootStrapHeader.php"); 
-	echo $BootStrapHeader
+	echo $BootStrapHeader;
 	?>
 
 	<link rel="stylesheet" type="text/css" href="AssetTracker.css">

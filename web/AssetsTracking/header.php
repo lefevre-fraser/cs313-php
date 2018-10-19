@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 $header = '<div id="main_div" class="container">';
 
