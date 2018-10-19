@@ -24,10 +24,12 @@ session_start();
 			echo "<h1>User Name: " . $_SESSION["user_name"] . "</h1>";
 			echo "<a href='logout.php' class='btn btn-secondary'>Log Out</a>";
 
+			echo "<br><hr><br>";
+
 			echo "<form action='AssetTracker.php' method='post'>";
 			echo "<label>Search by Asset Name:</label><br>";
 			echo "<input name='search_context' type='text' placeholder='Couch'>";
-			echo "<button type='submit'>Search</button>";
+			echo "<button type='submit'>Search</button><br>";
 			echo "</form>";
 
 			include("DatabaseConnect.php");
