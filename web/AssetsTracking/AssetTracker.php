@@ -81,7 +81,7 @@ session_start();
 
 	</div>
 
-	<?php include_once("BootStrapFooter.php") ?>
+	<?php include_once("BootStrapFooter.php"); ?>
 
 </body>
 </html>
