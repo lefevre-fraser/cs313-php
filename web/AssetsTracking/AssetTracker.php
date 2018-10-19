@@ -7,6 +7,9 @@ session_start();
 <head>
 	<title>Asset Tracker</title>
 
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -69,16 +72,16 @@ session_start();
 			echo "</tbody></table>";
 		}
 		else {
-			echo '<div id="main_div" class="container-fluid align-content-center align-items-center">';
+			echo '<div id="main_div" class="container h-100 d-flex justify-content-center">';
 
 			echo 
-				'<div class="align-content-center align-items-center">
+				'<div class="jumbotron my-auto">
 				<form action="login.php" method="post">
 					<label>User Name:</label><br>
 					<input type="text=" size="40" name="user_name"><br>
 					<label>Password:</label><br>
 					<input type="text=" size="40" name="password"><br><br>
-					<button type="submit">Login</button>
+					<button type="submit" class="btn btn-block">Login</button>
 				</form>	
 				</div>';
 		}
