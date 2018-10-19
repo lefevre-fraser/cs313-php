@@ -7,7 +7,7 @@ session_start();
 <head>
 	<title>Asset Tracker</title>
 
-	<?php include_once("BootStrapHeader.php") ?>
+	<?php include_once("BootStrapHeader.php"); ?>
 
 	<link rel="stylesheet" type="text/css" href="AssetTracker.css">
 	<script type="text/javascript" src="AssetTracker.js"></script>
