@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-include_once("Database_Connect.php");
+include_once("DatabaseConnect.php");
 
 $queryString  = "select insert_asset(";
 $queryString .= "'" . $_SESSION["user_name"] . "'";
