@@ -13,7 +13,7 @@
 	}
 	$options = [ 'cost' => 8, 'salt' => $saltString];
 
-	$password = password_hash($_POST["password"], $options);
+	$password = password_hash($_POST["password"], PASSWORD_BCRYPT, $options);
 
 	$queryString =  "select user_name, user_id, fname, lname, mname";
 	$queryString .= " from users";
