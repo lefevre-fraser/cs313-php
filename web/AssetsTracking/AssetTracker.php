@@ -23,7 +23,7 @@ session_start();
 		<?php 
 
 		if (isset($_SESSION["user_name"]) && isset($_SESSION['user_id'])) {
-			echo '<div id="main_div" class="container-fluid">';
+			echo '<div id="main_div" class="container">';
 
 			echo "<h1>Name: " . $_SESSION["full_name"] . "</h1>";
 			echo "<a href='logout.php' class='btn btn-secondary'>Log Out</a>";
