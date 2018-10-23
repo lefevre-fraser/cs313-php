@@ -156,6 +156,51 @@ values
 ,	(select admin_user_id from admin_users where admin_user_name = 'SYSADMIN')
 ,	current_date);
 
+insert into salts
+(	salt_id
+,	salt_value
+,	last_changed_by
+,	last_changed_date
+,	created_by
+,	creation_date)
+values
+(	nextval('salts_s1')
+,	'asdliuvae9837ojk3l1jlhi1r6fidsvaspq87oiulrq'
+,	(select admin_user_id from admin_users where admin_user_name = 'SYSADMIN')
+,	current_date
+,	(select admin_user_id from admin_users where admin_user_name = 'SYSADMIN')
+,	current_date);
+
+insert into salts
+(	salt_id
+,	salt_value
+,	last_changed_by
+,	last_changed_date
+,	created_by
+,	creation_date)
+values
+(	nextval('salts_s1')
+,	'09we8hgpi34rjgb;goe86og1u34bkb43jtyuiwuerqi'
+,	(select admin_user_id from admin_users where admin_user_name = 'SYSADMIN')
+,	current_date
+,	(select admin_user_id from admin_users where admin_user_name = 'SYSADMIN')
+,	current_date);
+
+insert into salts
+(	salt_id
+,	salt_value
+,	last_changed_by
+,	last_changed_date
+,	created_by
+,	creation_date)
+values
+(	nextval('salts_s1')
+,	'v097i4uht2bg10ihlkkay53brLKJFwoelkjnbv9876*'
+,	(select admin_user_id from admin_users where admin_user_name = 'SYSADMIN')
+,	current_date
+,	(select admin_user_id from admin_users where admin_user_name = 'SYSADMIN')
+,	current_date);
+
 insert into users
 (	user_id
 ,	user_name
