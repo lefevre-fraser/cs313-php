@@ -7,5 +7,5 @@ $queryResult = $db->prepare($queryString);
 $queryResult->execute();
 $queryResult = $queryResult->fetch_all();
 
-echo json_encode($queryResult);
+print_r($queryResult);
 ?>
