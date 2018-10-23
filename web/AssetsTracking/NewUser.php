@@ -3,9 +3,10 @@ include_once("DatabaseConnect.php");
 
 $queryString  = "select salt_id, salt_value from salts";
 
-$queryResult = $dq->query($queryString);
+$queryResult = $db->query($queryString);
 
-foreach ($queryResult as $row) {
-	echo gettype($row);
+foreach ($queryResult as $key => $value) {
+	echo $key;
+	echo $value;
 }
 ?>
