@@ -7,5 +7,5 @@ $query = $db->prepare($queryString);
 $query->execute();
 $queryResult = $query->fetchAll();
 
-print_r($queryResult);
+echo $queryResult["salt_id"];
 ?>
