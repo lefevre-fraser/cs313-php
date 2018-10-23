@@ -6,6 +6,11 @@ include_once("DatabaseConnect.php");
 if (isset($_POST["new_user_name"])) {
 
 	$queryString  = "select salt_id, salt_value from salts";
+	$query = $db->prepare($queryString);
+	$query->execute();
+	$queryResult = $query->fetchAll();
+	$i = mt_rand(0, sizeof($queryResult));
+	$queryResult[$i]["salt_id"];
 
 	$queryString  = "select insert_user(";
 	$queryString .= "'" . $_POST["new_user_name"] . "'";
