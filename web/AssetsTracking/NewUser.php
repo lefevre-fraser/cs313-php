@@ -5,7 +5,7 @@ $queryString  = "select salt_id, salt_value from salts";
 
 $query = $db->prepare($queryString);
 $query->execute();
-$queryResult = $query->fetch_all();
+$queryResult = $query->fetchAll();
 
 print_r($queryResult);
 ?>
