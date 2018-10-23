@@ -5,6 +5,5 @@ $queryString  = "select salt_id, salt_value from salts";
 
 $queryResult = $db->query($queryString);
 
-$salt = $queryResult[0];
-echo sizeof($salt);
+echo sizeof($queryResult);
 ?>
