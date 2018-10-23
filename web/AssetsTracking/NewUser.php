@@ -3,9 +3,9 @@ include_once("DatabaseConnect.php");
 
 $queryString  = "select salt_id, salt_value from salts";
 
-$queryResult = $db->query($queryString);
+$queryResult = $db->prepare($queryString);
+$queryResult->execute();
+$queryResult = $queryResult->fetch_all();
 
-echo sizeof($queryResult);
-
-echo json_encode($queryResult->fetch_all());
+echo json_encode($queryResult);
 ?>
