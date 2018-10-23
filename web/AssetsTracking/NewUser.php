@@ -7,5 +7,6 @@ $queryResult = $dq->query($queryString);
 
 foreach ($queryResult as $key => $value) {
 	echo $key;
+	echo $value;
 }
 ?>
