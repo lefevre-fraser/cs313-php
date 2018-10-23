@@ -7,5 +7,5 @@ $queryResult = $db->query($queryString);
 
 echo sizeof($queryResult);
 
-echo json_encode($queryResult);
+echo json_encode($queryResult->fetch_all());
 ?>
