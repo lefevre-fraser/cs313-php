@@ -5,8 +5,6 @@ $queryString  = "select salt_id, salt_value from salts";
 
 $queryResult = $db->query($queryString);
 
-foreach ($queryResult as $key => $value) {
-	echo $key;
-	echo $value;
-}
+echo $queryResult[0]["salt_id"];
+echo $queryResult[0]["salt_value"];
 ?>
