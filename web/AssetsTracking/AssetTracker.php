@@ -29,12 +29,12 @@ session_start();
 		echo "<label>Search by Asset Name:</label><br>";
 		echo "<input name='search_context' type='text' placeholder='Couch'><br>";
 
-		echo "<label>Order By:</label>";
+		echo "<label>Order By:</label><br>";
 		echo "<select name='order_by'>";
 		echo "<option value='asset_name'>Asset Name</option>";
 		echo "<option value='quantity'>Quantity</option>";
 		echo "<option value='asset_value'>Unit Value</option>";
-		echo "</select><br>";
+		echo "</select><br><br>";
 
 		echo "<button type='submit'>Search</button><br>";
 		echo "</form><br>";
