@@ -43,7 +43,7 @@ if (isset($_POST["new_user_name"])) {
 	$queryString .= ", '" . $area_code . "'";
 	$queryString .= ", '" . $phone_number . "'";
 	$queryString .= ", " . $saltId;
-	$queryString .= ", " . $HashedPassword;
+	$queryString .= ", '" . $HashedPassword . "'";
 
 	if (isset($_POST["mname"]) && $_POST["mname"] != "") {
 		$queryString .= ", '" . $_POST["mname"] . "'";

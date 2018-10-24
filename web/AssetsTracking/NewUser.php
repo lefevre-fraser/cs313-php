@@ -38,7 +38,7 @@ if ($_SESSION["user_name_exists"]) {
 				<input type="number" name="phone_number" placeholder="(xxx) xxx-xxxx" required><br>
 
 				<br>
-				<button type="submit" class="btn btn-block">Login</button>
+				<button type="submit" class="btn btn-block">Create User</button>
 			</form>	
 		</div>
 	</div>
