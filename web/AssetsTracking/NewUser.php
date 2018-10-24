@@ -35,7 +35,7 @@ if ($_SESSION["user_name_exists"]) {
 				<label>Middle Name:</label><br>
 				<input type="text" size="40" name="mname"><br>
 				<label>10 Digit Phone Number:</label><br>
-				<input type="number" name="phone_number" placeholder="(xxx) xxx-xxxx" required><br>
+				<input type="text" name="phone_number" placeholder="(xxx) xxx-xxxx" required><br>
 
 				<br>
 				<button type="submit" class="btn btn-block">Create User</button>
