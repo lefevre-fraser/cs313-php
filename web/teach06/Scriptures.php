@@ -47,6 +47,9 @@
 			echo "<label>" . $row["name"] . "</label><br>";
 		}
 
+		echo "<input type='checkbox' name='new_topic' value='true'>";
+		echo "<input type='text' name='topic'><br>";
+
 		?>
 
 		<button type="submit">Submit scripture</button>

@@ -124,3 +124,17 @@ EXCEPTION
 	return 0;
 END;
 $$ language plpgsql;
+
+create or replace function add_topic
+(	f_name text)
+returns integer as $$
+BEGIN
+	insert into topic
+	(	name)
+	values
+	(	f_name);
+
+	return (select topic_id from topic
+			where name = f_name);
+END;
+$$ language plpgsql;
