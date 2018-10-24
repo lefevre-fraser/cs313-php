@@ -52,6 +52,9 @@
 		<button type="submit">Submit scripture</button>
 
 	</form>
+	<br>
+	<br>
+	<br>
 
 	<?php
 	$queryString  = "select";
