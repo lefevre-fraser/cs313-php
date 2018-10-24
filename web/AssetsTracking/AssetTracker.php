@@ -17,6 +17,12 @@ session_start();
 </head>
 <body>
 
+	<select name='order_by'>
+		<option value='asset_name'>Asset Name</option>
+		<option value='quantity'>Quantity</option>
+		<option value='asset_value'>Unit Value</option>
+	</select>
+
 	<?php 
 
 	if (isset($_SESSION["login"]) && $_SESSION["login"]) {
@@ -28,7 +34,14 @@ session_start();
 		echo "<form action='AssetTracker.php' method='post'>";
 		echo "<label>Search by Asset Name:</label><br>";
 		echo "<input name='search_context' type='text' placeholder='Couch'>";
-		echo "<button type='submit'>Search</button>";
+
+		echo "<select name='order_by'>";
+		echo "<option value='asset_name'>Asset Name</option>";
+		echo "<option value='quantity'>Quantity</option>";
+		echo "<option value='asset_value'>Unit Value</option>";
+		echo "</select>";
+
+		echo "<button type='submit'>Search</button><br>";
 		echo "</form><br>";
 
 		include_once("DatabaseConnect.php");
@@ -42,7 +55,17 @@ session_start();
 			$queryString .= " and UPPER(a.asset_name) like '%" . strtoupper($_POST["search_context"]) . "%'";
 		}
 
-		$queryString .= " order by a.asset_name";
+		if (isset($_POST["order_by"])) {
+			if ($_POST["order_by"] == "asset_name") {
+				$queryString .= " order by a.asset_name";
+			} else if ($_POST["order_by"] == "quantity") {
+				$queryString .= " order by ua.quantity";
+			} else if ($_POST["order_by"] == "asset_value") {
+				$queryString .= " order by ua.asset_value";
+			}
+		} else {
+			$queryString .= " order by a.asset_name";
+		}
 
 		$user_assets = $db->query($queryString);
 
