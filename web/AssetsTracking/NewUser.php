@@ -32,8 +32,8 @@ if ($_SESSION["user_name_exists"]) {
 				<input type="text" size="40" name="fname" placeholder="John" required><br>
 				<label>Last Name:</label><br>
 				<input type="text" size="40" name="lname" placeholder="Doe" required><br>
-				<label>Middle Name:</label>
-				<input type="text" size="40" name="mname">
+				<label>Middle Name:</label><br>
+				<input type="text" size="40" name="mname"><br>
 				<label>10 Digit Phone Number:</label><br>
 				<input type="number" name="phone_number" placeholder="(xxx) xxx-xxxx" required><br>
 
