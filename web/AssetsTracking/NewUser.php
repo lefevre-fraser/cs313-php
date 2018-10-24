@@ -23,19 +23,19 @@ if ($_SESSION["user_name_exists"]) {
 		<div class="jumbotron my-auto">
 			<form action="insert.php" method="post">
 				<label>User Name:</label><br>
-				<input type="text=" size="40" name="new_user_name" required><br>
+				<input type="text=" size="40" maxlength="40" name="new_user_name" required><br>
 				<label>Password:</label><br>
 				<input type="password" size="40" name="password" id="password1" required><br>
 				<label>Confirm Password:</label><br>
 				<input type="password" size="40" name="password" id="password2" required><br>
 				<label>First Name:</label><br>
-				<input type="text" size="40" name="fname" placeholder="John" required><br>
+				<input type="text" size="40" maxlength="40" name="fname" placeholder="John" required><br>
 				<label>Last Name:</label><br>
-				<input type="text" size="40" name="lname" placeholder="Doe" required><br>
+				<input type="text" size="40" maxlength="40" name="lname" placeholder="Doe" required><br>
 				<label>Middle Name:</label><br>
-				<input type="text" size="40" name="mname"><br>
+				<input type="text" size="40" maxlength="40" name="mname"><br>
 				<label>10 Digit Phone Number:</label><br>
-				<input type="text" name="phone_number" placeholder="(xxx) xxx-xxxx" required><br>
+				<input type="text" size="14" maxlength="14" name="phone_number" placeholder="(xxx) xxx-xxxx" required><br>
 
 				<br>
 				<button type="submit" class="btn btn-block">Create User</button>
