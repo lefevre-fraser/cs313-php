@@ -29,15 +29,19 @@ if (isset($_POST["new_user_name"])) {
 	$options        = [ 'cost' => 8, 'salt' => $queryResult[$i]["salt_value"]];
 	$HashedPassword = password_hash($_POST["password"], PASSWORD_BCRYPT, $options);
 
-	$area_code = preg_split("/(/", $_POST["phone_number"]);
-	$area_code = preg_split("/)/", $area_code[0]);
+	$area_code = preg_split("/\(/", $_GET["phone_number"]);
+	$area_code = preg_split("/\)/", $area_code[1]);
+	$phone_number = preg_split("/ /", $area_code[1]);
+
+	$area_code = $area_code[0];
+	$phone_number = $phone_number[1];
 
 	$queryString  = "select insert_user(";
 	$queryString .= "'" . $_POST["new_user_name"] . "'";
 	$queryString .= ", '" . $_POST["fname"] . "'";
 	$queryString .= ", '" . $_POST["lname"] . "'";
-	$queryString .= ", '" . $_POST["area_code"] . "'";
-	$queryString .= ", '" . $_POST["phone_number"] . "'";
+	$queryString .= ", '" . $area_code . "'";
+	$queryString .= ", '" . $phone_number . "'";
 	$queryString .= ", " . $saltId;
 	$queryString .= ", " . $HashedPassword;
 
