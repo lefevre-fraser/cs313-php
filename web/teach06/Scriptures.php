@@ -5,10 +5,10 @@
 	<link rel="stylesheet" type="text/css" href="teach06.css">
 	<script type="text/javascript">
 		function hide_show(id) {
-			if (document.getElementById(id).classList == "hidden") {
-				document.getElementById(id).classList = "";
+			if (document.getElementById(id).classList.contains('hidden')) {
+				document.getElementById(id).classList.remove('hidden');
 			} else {
-				document.getElementById(id).classList = "hidden";
+				document.getElementById(id).classList.add('hidden');
 			}
 		}
 	</script>
@@ -71,7 +71,7 @@
 		$queryString .= " inner join topic t";
 		$queryString .= " on tp.topic_id = t.topic_id";
 		$queryString .= " where s.scripture_id = " . $row["scripture_id"];
-		
+
 		$query = $db->prepare($queryString);
 		$query->execute();
 		$topics = $query->fetchAll();
