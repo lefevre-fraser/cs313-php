@@ -27,7 +27,7 @@ if (isset($_POST["new_topic"]) && $_POST["name"] != "") {
 	$query->execute();
 	$new_topic = $query->fetchAll();
 	$new_topic = $new_topic[0]["add_topic"];
-	$topics += $new_topic;
+	array_push($topics, $new_topic);
 }
 
 foreach ($topics as $id) {
