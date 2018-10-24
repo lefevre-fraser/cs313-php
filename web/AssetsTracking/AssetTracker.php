@@ -17,12 +17,6 @@ session_start();
 </head>
 <body>
 
-	<select name='order_by'>
-		<option value='asset_name'>Asset Name</option>
-		<option value='quantity'>Quantity</option>
-		<option value='asset_value'>Unit Value</option>
-	</select>
-
 	<?php 
 
 	if (isset($_SESSION["login"]) && $_SESSION["login"]) {
