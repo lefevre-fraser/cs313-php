@@ -29,7 +29,7 @@ if (isset($_POST["new_user_name"])) {
 	$options        = [ 'cost' => 8, 'salt' => $queryResult[$i]["salt_value"]];
 	$HashedPassword = password_hash($_POST["password"], PASSWORD_BCRYPT, $options);
 
-	$area_code = preg_split("/\(/", $_GET["phone_number"]);
+	$area_code = preg_split("/\(/", $_POST["phone_number"]);
 	$area_code = preg_split("/\)/", $area_code[1]);
 	$phone_number = preg_split("/ /", $area_code[1]);
 
