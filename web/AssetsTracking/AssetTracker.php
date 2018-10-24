@@ -52,14 +52,14 @@ session_start();
 
 		if (isset($_POST["order_by"])) {
 			if ($_POST["order_by"] == "asset_name") {
-				$queryString .= " order by a.asset_name";
+				$queryString .= " order by a.asset_name, ua.quantity, ua.asset_value";
 			} else if ($_POST["order_by"] == "quantity") {
-				$queryString .= " order by ua.quantity";
+				$queryString .= " order by ua.quantity, a.asset_name, ua.asset_value";
 			} else if ($_POST["order_by"] == "asset_value") {
-				$queryString .= " order by ua.asset_value";
+				$queryString .= " order by ua.asset_value, a.asset_name, ua.quantity";
 			}
 		} else {
-			$queryString .= " order by a.asset_name";
+			$queryString .= " order by a.asset_name, ua.quantity, ua.asset_value";
 		}
 
 		$user_assets = $db->query($queryString);
