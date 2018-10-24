@@ -42,6 +42,8 @@ session_start();
 			$queryString .= " and UPPER(a.asset_name) like '%" . strtoupper($_POST["search_context"]) . "%'";
 		}
 
+		$queryString .= " order by a.asset_name";
+
 		$user_assets = $db->query($queryString);
 
 		echo "<table class='table'><thead><tr>";
