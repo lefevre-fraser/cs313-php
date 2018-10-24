@@ -79,14 +79,14 @@
 		echo "<button onclick='hide_show(";
 		echo $row['scripture_id'] . ")'>";
 		echo $row["book"] . " " . $row["chapter"] . ":" . $row["verse"];
-		echo "</button>";
+		echo "</button><br>";
 
 		echo "<div id='" . $row['scripture_id'] . "' class='hidden'>";
 		echo "<p>" . $row["content"] . "</p>";
 
 		echo "<ul>";
 		foreach ($topics as $topic) {
-			echo "<li>" . $topic . "</li>";
+			echo "<li>" . $topic["name"] . "</li>";
 		}
 
 		echo "</ul>";
