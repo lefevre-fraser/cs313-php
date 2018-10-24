@@ -38,7 +38,7 @@ if (isset($_POST["new_user_name"])) {
 	$queryString .= ", " . $saltId;
 	$queryString .= ", " . $HashedPassword;
 
-	if (isset($_POST["mname"])) {
+	if (isset($_POST["mname"]) && $_POST["mname"] != "") {
 		$queryString .= ", '" . $_POST["mname"] . "'";
 	}
 
