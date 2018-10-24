@@ -80,10 +80,10 @@ create table scripture_topics
 ,	primary key (scripture_id, topic_id));
 
 create or replace function insert_scripture
-(	book varchar(40)
-,	chapter integer
-,	verse integer
-,	content text)
+(	f_book varchar(40)
+,	f_chapter integer
+,	f_verse integer
+,	f_content text)
 returns integer as $$
 BEGIN
 	insert into scriptures
@@ -92,31 +92,31 @@ BEGIN
 	,	verse
 	,	content)
 	values 
-	(	book
-	,	chapter
-	,	verse
-	,	content);
+	(	f_book
+	,	f_chapter
+	,	f_verse
+	,	f_content);
 
 	return (select scripture_id
 			from scriptures s
-			where s.book = book
-			and s.chapter = chapter
-			and s.verse = verse
-			and s.content = content);
+			where s.book = f_book
+			and s.chapter = f_chapter
+			and s.verse = f_verse
+			and s.content = f_content);
 END;
 $$ language plpgsql;
 
 create or replace function connect_to_topic
-(	scripture_id integer
-,	topic_id integer)
+(	f_scripture_id integer
+,	f_topic_id integer)
 returns boolean as $$
 BEGIN
 	insert into scripture_topics
 	(	scripture_id
 	,	topic_id)
 	values
-	(	scripture_id
-	,	topic_id);
+	(	f_scripture_id
+	,	f_topic_id);
 
 	return 1;
 EXCEPTION

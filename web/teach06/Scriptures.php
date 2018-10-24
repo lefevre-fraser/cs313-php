@@ -2,10 +2,20 @@
 <html>
 <head>
 	<title></title>
+	<link rel="stylesheet" type="text/css" href="teach06.css">
+	<script type="text/javascript">
+		function hide_show(id) {
+			if (document.getElementById(id).class == "hidden") {
+				document.getElementById(id).class = "";
+			} else {
+				document.getElementById(id).class = "hidden";
+			}
+		}
+	</script>
 </head>
 <body>
 	<form action="InsertData.php" method="post">
-		
+
 		<label>Book:</label><br>
 		<input type="text" size="40" name="book"><br>
 		<label>Chapter:</label><br>
@@ -42,6 +52,48 @@
 		<button type="submit">Submit scripture</button>
 
 	</form>
+
+	<?php
+	$queryString  = "select";
+	$queryString .= " scripture_id, book, chapter, verse, content";
+	$queryString .= " from scriptures";
+
+	$query = $db->prepare($queryString);
+	$query->execute();
+	$results = $query->fetchAll();
+
+	$queryString  = "select t.name from";
+	$queryString .= " scriptures s inner join scripture_topics tp";
+	$queryString .= " on s.scripture_id = tp.scripture_id";
+	$queryString .= " inner join topic t";
+	$queryString .= " on tp.topic_id = t.topic_id";
+
+	foreach ($results as $row) {
+		$queryString .= " where s.scripture_id = " . $row["scripture_id"];
+		$query = $db->prepare($queryString);
+		$query->execute();
+		$topics = $query->fetchAll();
+
+		echo "<button onclick='hide_show(";
+		echo $row['scripture_id'] . ")'>";
+		echo $row["book"] . " " . $row["chapter"] . ":" . $row["verse"];
+		echo "</button>";
+
+		echo "<div id='" . $row['scripture_id'] . "' class='hidden'>";
+		echo "<p>" . $row["content"] . "</p>";
+
+		echo "<ul>";
+		foreach ($topics as $topic) {
+			echo "<li>" . $topic . "</li>";
+		}
+
+		echo "</ul>";
+
+		echo "</div>";
+	}
+
+	?>
+
 </body>
 </html>
 
