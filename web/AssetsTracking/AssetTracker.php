@@ -27,13 +27,13 @@ session_start();
 
 		echo "<form action='AssetTracker.php' method='post'>";
 		echo "<label>Search by Asset Name:</label><br>";
-		echo "<input name='search_context' type='text' placeholder='Couch'>";
+		echo "<input name='search_context' type='text' placeholder='Couch'><br>";
 
 		echo "<select name='order_by'>";
 		echo "<option value='asset_name'>Asset Name</option>";
 		echo "<option value='quantity'>Quantity</option>";
 		echo "<option value='asset_value'>Unit Value</option>";
-		echo "</select>";
+		echo "</select><br>";
 
 		echo "<button type='submit'>Search</button><br>";
 		echo "</form><br>";
