@@ -53,7 +53,7 @@
 
 	</form>
 	<br>
-	<br>
+	<hr>
 	<br>
 
 	<?php
