@@ -1,6 +1,6 @@
-drop table scriptures;
-drop table topic;
-drop table scripture_topics;
+drop table scriptures cascade;
+drop table topic cascade;
+drop table scripture_topics cascade;
 
 create table scriptures
 (	scripture_id serial primary key
