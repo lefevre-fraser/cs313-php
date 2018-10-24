@@ -8,6 +8,18 @@ if (isset($_POST["new_user_name"])) {
 	$queryString  = "select user_name from users";
 	$queryString .= " where user_name = '" . $_POST["new_user_name"] . "'";
 
+	$query       = $db->prepare($queryString);
+	$query->execute();
+	$queryResult = $query->fetchAll();
+
+	if (sizeof($queryResult) > 0) {
+		$_SESSION["user_name_exists"] = true;
+		header("Location: NewUser.php");
+		exit;
+	} else {	
+		$_SESSION["user_name_exists"] = false;
+	}
+
 	$queryString    = "select salt_id, salt_value from salts";
 	$query          = $db->prepare($queryString);
 	$query->execute();
