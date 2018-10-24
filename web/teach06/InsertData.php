@@ -22,7 +22,7 @@ $query->execute();
 $results = $query->fetchAll();
 
 if (isset($_POST["new_topic"]) && $_POST["topic"] != "") {
-	$queryString = "select add_topic(" . $_POST["topic"] . ")";
+	$queryString = "select add_topic('" . $_POST["topic"] . "')";
 	$query = $db->prepare($queryString);
 	$query->execute();
 	$new_topic = $query->fetchAll();
