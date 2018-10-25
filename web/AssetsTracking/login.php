@@ -36,8 +36,10 @@
 			$_SESSION["full_name"] .= " " . $row["lname"];
 
 			$_SESSION["login_error"] = 1;
-		} else {
-			$_SESSION["login_error"] = 0;
+		} 
+		
+		if (!isset($_SESSION["login_error"])) {
+			$_SESSION["login_error"] = 0;			
 		}
 	}
 
