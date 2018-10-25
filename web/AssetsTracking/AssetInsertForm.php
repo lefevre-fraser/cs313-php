@@ -46,10 +46,11 @@ session_start();
 
 	}
 
+	?>
+
+	<?php
 	include_once("ErrorDictionary.php");
-
 	insert_error_scripts();
-
 	?>
 
 	<script type="text/javascript">
