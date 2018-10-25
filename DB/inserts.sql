@@ -52,6 +52,7 @@ select change_quantity
 (	'Feves'
 ,	'TV'
 ,	100
+,	100
 ,	2
 );
 

@@ -19,7 +19,7 @@ session_start();
 
 	<?php 
 
-	if (isset($_SESSION["login"]) && $_SESSION["login"]) {
+	if (isset($_SESSION["login_error"]) && $_SESSION["login_error"]) {
 		echo '<div id="main_div" class="container">';
 
 		include_once("header.php");
@@ -45,6 +45,10 @@ session_start();
 		echo $LoginPage;
 
 	}
+
+	require_once("ErrorDictioary.php");
+
+	insert_error_scripts();
 
 	?>
 

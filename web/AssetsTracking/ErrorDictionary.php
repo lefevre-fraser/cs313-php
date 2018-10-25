@@ -18,6 +18,11 @@ $change_error =
 		2 => 'You already have an asset with that name and unit value',
 		3 => 'Multiple Errors occured while changing your asset information');
 
+$login_error = 
+	array(
+		0 => 'Unable to login with provided credentials'
+		1 => 'Welcome to your Asset Tracker');
+
 function insert_error_scripts()
 {
 	echo "<script>$('document').ready(function() {";
@@ -41,6 +46,12 @@ function insert_error_scripts()
 		}
 
 		unset($_SESSION["change_error"]);
+	}
+
+	if (isset($_SESSION["login_error"])) {
+		echo "alert(\"" . $GLOBALS["login_error"][$_SESSION["login_error"]] . "\");";
+
+		unset($_SESSION["login_error"]);
 	}
 
 	echo "})</script>";

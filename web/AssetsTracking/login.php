@@ -34,9 +34,9 @@
 			}
 			$_SESSION["full_name"] .= " " . $row["lname"];
 
-			$_SESSION["login"] = 1;
+			$_SESSION["login_error"] = 1;
 		} else {
-			$_SESSION["login"] = 0;
+			$_SESSION["login_error"] = 0;
 		}
 	}
 
