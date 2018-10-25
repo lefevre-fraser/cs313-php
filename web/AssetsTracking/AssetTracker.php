@@ -91,7 +91,7 @@ session_start();
 			echo "<input type='number' value='" . $row["quantity"] . "'>";
 			echo "</td>";
 
-			echo "<td>$"
+			echo "<td>$";
 			echo "<input type='number' value='" . $row["asset_value"] . "'>";
 			echo "</td>";
 
