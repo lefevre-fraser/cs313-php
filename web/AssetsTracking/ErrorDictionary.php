@@ -20,7 +20,7 @@ $change_error =
 
 function insert_error_scripts()
 {
-	echo "<script>";
+	echo "<script>$('document').ready(function() {";
 
 	if (isset($_SESSION["insert_user_error"])) {
 		echo "alert(\"" . $GLOBALS["insert_user_error"][$_SESSION["insert_user_error"]] . "\");";
@@ -43,6 +43,6 @@ function insert_error_scripts()
 		unset($_SESSION["change_error"]);
 	}
 
-	echo "</script>";
+	echo "})</script>";
 }
 ?>
