@@ -1,4 +1,6 @@
 <?php
+	session_start();
+
 	include_once("DatabaseConnect.php");
 
 	$queryString  = "select s.salt_value";
@@ -25,7 +27,6 @@
 
 	foreach ($user_name as $row) {
 		if (isset($row["user_name"])) {
-			session_start();
 			$_SESSION["user_name"] = $row["user_name"];
 			$_SESSION["user_id"] = $row["user_id"];
 			$_SESSION["full_name"] = $row["fname"];
