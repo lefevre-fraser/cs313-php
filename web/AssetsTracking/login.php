@@ -36,11 +36,11 @@
 			$_SESSION["full_name"] .= " " . $row["lname"];
 
 			$_SESSION["login_error"] = 1;
-		} 
-		
-		if (!isset($_SESSION["login_error"])) {
-			$_SESSION["login_error"] = 0;			
 		}
+	}
+
+	if (!isset($_SESSION["login_error"])) {
+		$_SESSION["login_error"] = 0;			
 	}
 
 	header("Location: {$_SERVER['HTTP_REFERER']}");
