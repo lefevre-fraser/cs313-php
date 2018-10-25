@@ -46,7 +46,7 @@ session_start();
 
 	}
 
-	require_once("ErrorDictionary.php");
+	include_once("ErrorDictionary.php");
 
 	insert_error_scripts();
 
