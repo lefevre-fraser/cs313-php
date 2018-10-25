@@ -88,11 +88,11 @@ session_start();
 			echo "</th>";
 
 			echo "<td>";
-			echo "<input type='number' value='" . $row["quantity"] . "'>";
+			echo "<input type='number' value='" . $row["quantity"] . "' name='" . $UniqueName . "['quantity']'>";
 			echo "</td>";
 
 			echo "<td class='text-nowrap'>$";
-			echo "<input type='number' value='" . $row["asset_value"] . "'>";
+			echo "<input type='number' value='" . $row["asset_value"] . "' name='" . $UniqueName . "['asset_value']'>";
 			echo "</td>";
 
 			echo "<td>$" . ($row["quantity"] * $row["asset_value"]) . "</td>";
