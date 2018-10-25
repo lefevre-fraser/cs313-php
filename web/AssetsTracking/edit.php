@@ -7,7 +7,6 @@ include_once("DatabaseConnect.php");
 if (isset($_POST["update"])) {
 
 } else if (isset($_POST["delete"])) {
-
 	foreach ($_POST["assets"] as $asset_identify) {
 
 		$asset = preg_split("/\\$/", $asset_identify);
@@ -27,7 +26,9 @@ if (isset($_POST["update"])) {
 
 		echo json_encode($result);
 	}
-
 }
+
+header("Location: AssetTracker.php");
+exit;
 
 ?>
