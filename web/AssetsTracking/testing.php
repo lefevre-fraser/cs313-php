@@ -1,17 +1,12 @@
 <?php
+session_start();
 
-$_GET["phone_number"] = "(702) 960-3038";
-echo $_GET["phone_number"] . "\n";
+$_SESSION["insert_user_error"] = 2;
+$_SESSION["insert_error"] = 2;
+$_SESSION["change_error"] = 3;
 
-$area_code = preg_split("/\(/", $_GET["phone_number"]);
-$area_code = preg_split("/\)/", $area_code[1]);
-$phone_number = preg_split("/ /", $area_code[1]);
+include_once("ErrorDictionary.php");
 
-$area_code = $area_code[0];
-$phone_number = $phone_number[1];
+insert_error_scripts();
 
-
-echo $area_code . "\n";
-
-echo $phone_number . "\n";
 ?>

@@ -8,7 +8,7 @@ create or replace function insert_user
 ,	f_hashed_password text
 ,	f_mname varchar(40) default null
 )
-returns text as $$
+returns integer as $$
 BEGIN
 
 	BEGIN
@@ -27,8 +27,7 @@ BEGIN
 		,	(select admin_user_id from admin_users where admin_user_name = 'SYSADMIN')
 		,	current_date);
 	EXCEPTION
-		WHEN UNIQUE_VIOLATION
-		THEN NULL;
+		WHEN UNIQUE_VIOLATION THEN NULL;
 	END;
 
 	insert into users
@@ -60,8 +59,10 @@ BEGIN
 	,	(select admin_user_id from admin_users where admin_user_name = 'SYSADMIN')
 	,	current_date);
 
-	return 'true';
-
+	return 1;
+EXCEPTION
+	WHEN UNIQUE_VIOLATION THEN return 2;
+	WHEN OTHERS THEN return 0;
 END;
 $$ language plpgsql;
 
@@ -73,7 +74,7 @@ create or replace function insert_asset
 ,	f_asset_value bigint
 ,	f_asset_name text
 )
-returns text as $$
+returns integer as $$
 BEGIN
 
 	BEGIN
@@ -92,8 +93,7 @@ BEGIN
 		,	(select admin_user_id from admin_users where admin_user_name = 'SYSADMIN')
 		,	current_date);
 	EXCEPTION
-		WHEN UNIQUE_VIOLATION
-		THEN NULL;
+		WHEN UNIQUE_VIOLATION THEN NULL;
 	END;
 
 
@@ -116,27 +116,33 @@ BEGIN
 	,	(select admin_user_id from admin_users where admin_user_name = 'SYSADMIN')
 	,	current_date);
 
-	return 'true';
-
+	return 1;
+EXCEPTION
+	WHEN UNIQUE_VIOLATION THEN return 2;
+	WHEN OTHERS THEN return 0;
 END;
 $$ language plpgsql;
 
-create or replace function change_quantity
-(	f_user_name varchar(40)
-,	f_asset_name text
-,	f_asset_value bigint
-,	f_quantity integer
+create or replace function change_user_asset
+(	f_user_name 		varchar(40)
+,	f_asset_name 		text
+,	f_asset_value 		bigint
+,	f_old_asset_value 	bigint
+,	f_quantity 			integer
 )
-returns text as $$
+returns integer as $$
 BEGIN
 	
 	UPDATE user_assets
-		SET quantity = f_quantity
+		SET quantity = f_quantity,
+			asset_value = f_asset_value
 	WHERE user_id  = (select user_id  from users  where user_name  = f_user_name)
 	AND   asset_id = (select asset_id from assets where asset_name = f_asset_name)
-	AND   asset_value = f_asset_value;
+	AND   asset_value = f_old_asset_value;
 
-	return 'true';
-
+	return 1;
+EXCEPTION
+	WHEN UNIQUE_VIOLATION THEN return 2;
+	WHEN OTHERS THEN return 0;
 END;
 $$ language plpgsql;
