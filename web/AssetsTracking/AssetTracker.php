@@ -69,10 +69,10 @@ session_start();
 		echo "<button type='submit' name='delete'>Delete Assets</button>";
 
 		echo "<table class='table'><thead><tr>";
-		echo "<th class='col'>Asset Name</th>";
-		echo "<th class='col'>Quantity</th>";
-		echo "<th class='col'>Unit Value</th>";
-		echo "<th class='col'>Total Value</th>";
+		echo "<th class='col text-nowrap'>Asset Name</th>";
+		echo "<th class='col text-nowrap'>Quantity</th>";
+		echo "<th class='col text-nowrap'>Unit Value</th>";
+		echo "<th class='col text-nowrap'>Total Value</th>";
 		echo "</tr></thead><tbody>";
 
 		$total = 0;
