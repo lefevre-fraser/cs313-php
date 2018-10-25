@@ -1,9 +1,9 @@
 <?php
 session_start();
 
-if ($_SESSION["user_name_exists"]) {
-	echo "<script>alert('User name already Exists');</script>";
-}
+// if ($_SESSION["user_name_exists"]) {
+// 	echo "<script>alert('User name already Exists');</script>";
+// }
 
 ?>
 

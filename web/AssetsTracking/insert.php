@@ -65,6 +65,7 @@ if (isset($_POST["new_user_name"])) {
 	} else {
 		header("Location: {$_SERVER['HTTP_REFERER']}");
 	}	
+	
 
 	exit;
 
