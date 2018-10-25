@@ -41,7 +41,7 @@ session_start();
 
 		include_once("DatabaseConnect.php");
 
-		$queryString =  "select a.asset_name, ua.quantity, ua.asset_value";
+		$queryString =  "select a.asset_name, a.asset_id, ua.quantity, ua.asset_value";
 		$queryString .= " from user_assets ua inner join assets a";
 		$queryString .= " on ua.asset_id = a.asset_id";
 		$queryString .= " where ua.user_id = " . $_SESSION['user_id'];
@@ -64,6 +64,10 @@ session_start();
 
 		$user_assets = $db->query($queryString);
 
+		echo "<form action='edit.php' method='post'>";
+		echo "<button type='submit' name='update'>Update Assets</button>";
+		echo "<button type='submit' name='delete'>Delete Assets</button>";
+
 		echo "<table class='table'><thead><tr>";
 		echo "<th class='col'>Asset Name</th>";
 		echo "<th class='col'>Quantity</th>";
@@ -74,10 +78,26 @@ session_start();
 		$total = 0;
 
 		foreach ($user_assets as $row) {
-			echo "<tr><th class='row'>" . $row["asset_name"] . "</th>";
-			echo "<td>" . $row["quantity"] . "</td>";
-			echo "<td>$" . $row["asset_value"] . "</td>";
-			echo "<td>$" . ($row["quantity"] * $row["asset_value"]) . "</td></tr>";
+			$UniqueName = $row["asset_id"] . "$" . $row["asset_value"];
+
+			echo "<tr>";
+
+			echo "<th class='row'>";
+			echo "<input type='checkbox' name='assets[]' value='" . $UniqueName . "'>";
+			echo "<label>" . $row["asset_name"] . "</label>";
+			echo "</th>";
+
+			echo "<td>";
+			echo "<input type='number' value='" . $row["quantity"] . "'>";
+			echo "</td>";
+
+			echo "<td>$"
+			echo "<input type='number' value='" . $row["asset_value"] . "'>";
+			echo "</td>";
+
+			echo "<td>$" . ($row["quantity"] * $row["asset_value"]) . "</td>";
+
+			echo "</tr>";
 			$total += ($row["quantity"] * $row["asset_value"]);
 		}
 
@@ -85,6 +105,10 @@ session_start();
 		echo "<td></td><td></td>";
 		echo "<td>$" . $total . "</td></tr>";
 		echo "</tbody></table>";
+
+		echo "<button type='submit' name='update'>Update Assets</button>";
+		echo "<button type='submit' name='delete'>Delete Assets</button>";
+		echo "</form>";
 
 		echo "</div>";
 	}
