@@ -10,7 +10,7 @@ if (isset($_POST["update"])) {
 
 	foreach ($_POST["assets"] as $asset_identify) {
 
-		$asset = preg_split("/\$/", $asset_identify);
+		$asset = preg_split("/\\$/", $asset_identify);
 		$asset_id = $asset[0];
 		$old_asset_value = $asset[1];
 
