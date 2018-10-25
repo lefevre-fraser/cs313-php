@@ -43,6 +43,10 @@ if ($_SESSION["user_name_exists"]) {
 		</div>
 	</div>
 
+	<?php
+	include_once("ErrorDictionary.php");
+	insert_error_scripts();
+	?>
 
 	<?php
 	include_once("BootStrapFooter.php");
