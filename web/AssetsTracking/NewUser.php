@@ -40,6 +40,8 @@ if ($_SESSION["user_name_exists"]) {
 				<br>
 				<button type="submit" class="btn btn-block">Create User</button>
 			</form>	
+
+			<a href="AssetTracker.php">Already have and account? Login Here!</a>
 		</div>
 	</div>
 
