@@ -20,7 +20,7 @@ $change_error =
 
 $login_error = 
 	array(
-		0 => 'Unable to login with provided credentials'
+		0 => 'Unable to login with provided credentials',
 		1 => 'Welcome to your Asset Tracker');
 
 function insert_error_scripts()
