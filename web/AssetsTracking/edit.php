@@ -14,9 +14,6 @@ if (isset($_POST["update"])) {
 		$asset_id = $asset[0];
 		$old_asset_value = $asset[1];
 
-		echo $asset_id;
-		echo $old_asset_value;
-
 		$asset = $_POST[$asset_identify];
 
 		$queryString  = "delete from user_assets";
@@ -26,7 +23,9 @@ if (isset($_POST["update"])) {
 
 		$query = $db->prepare($queryString);
 		$query->execute();
-		echo json_encode($query->fetchAll());
+		$result = $query->fetchAll();
+
+		echo json_encode($result);
 	}
 
 }
