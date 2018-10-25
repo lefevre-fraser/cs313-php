@@ -8,6 +8,6 @@ $header .= "<a href='AssetInsertForm.php' id='insert' class='btn btn-primary'>As
 $header .= "<a href='logout.php' class='btn btn-primary ml-auto'>Log Out</a>";
 $header .= "</div>";
 
-$header .= "<br><hr>";
+$header .= "<hr>";
 
 ?>
