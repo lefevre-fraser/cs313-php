@@ -20,6 +20,10 @@ if (isset($_POST["update"])) {
 		$queryString .= " where user_id = "   . $user_id;
 		$queryString .= " and asset_id = "    . $asset_id;
 		$queryString .= " and asset_value = " . $old_asset_value; 
+
+		$query = $db->prepare($queryString);
+		$query->execute();
+		print_r($query->fetchAll());
 	}
 
 }
