@@ -60,7 +60,12 @@ if (isset($_POST["new_user_name"])) {
 
 	$_SESSION["insert_user_error"] = $error_code[0]["insert_user"];
 
-	header("Location: AssetTracker.php");
+	if ($_SESSION["insert_user_error"] == 1) {
+		header("Location: AssetTracker.php");
+	} else
+		header("Location: {$_SERVER['HTTP_REFERER']}");
+	}
+
 	exit;
 
 } else {
