@@ -95,7 +95,7 @@ session_start();
 
 	}
 
-	require_once("ErrorDictioary.php");
+	require_once("ErrorDictionary.php");
 
 	insert_error_scripts();
 
