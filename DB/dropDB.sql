@@ -22,8 +22,8 @@ drop function insert_asset
 );
 
 drop function change_user_asset
-(	f_user_name 		varchar(40)
-,	f_asset_name 		text
+(	f_user_id 	 		integer
+,	f_asset_id 	 		integer
 ,	f_asset_value 		bigint
 ,	f_old_asset_value 	bigint
 ,	f_quantity 			integer

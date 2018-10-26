@@ -124,8 +124,8 @@ END;
 $$ language plpgsql;
 
 create or replace function change_user_asset
-(	f_user_name 		varchar(40)
-,	f_asset_name 		text
+(	f_user_id 			integer
+,	f_asset_id 			integer
 ,	f_asset_value 		bigint
 ,	f_old_asset_value 	bigint
 ,	f_quantity 			integer
@@ -136,8 +136,8 @@ BEGIN
 	UPDATE user_assets
 		SET quantity = f_quantity,
 			asset_value = f_asset_value
-	WHERE user_id  = (select user_id  from users  where user_name  = f_user_name)
-	AND   asset_id = (select asset_id from assets where asset_name = f_asset_name)
+	WHERE user_id  = f_user_id
+	AND   asset_id = f_asset_id
 	AND   asset_value = f_old_asset_value;
 
 	return 1;
