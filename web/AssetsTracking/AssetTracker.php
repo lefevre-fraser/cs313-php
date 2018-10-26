@@ -85,7 +85,7 @@ session_start();
 
 			echo "<tr>";
 
-			echo "<th class='row tab'>";
+			echo "<th>";
 			echo "<input type='checkbox' name='assets[]' value='" . $UniqueName . "' id='" . $UniqueName . "'>";
 			echo "<label class='tab'>$asset_name</label>";
 			echo "</th>";
