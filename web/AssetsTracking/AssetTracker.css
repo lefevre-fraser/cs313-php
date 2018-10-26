@@ -2,6 +2,10 @@ body {
 	background-color: lightgrey;
 }
 
+.light-grey {
+	background-color: lightgrey;
+}
+
 #main_div {
 	background-color: lightblue;
 	margin-bottom: 3%;
