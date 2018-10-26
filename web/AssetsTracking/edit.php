@@ -12,6 +12,8 @@ if (isset($_POST["update"])) {
 
 		$asset = $_POST[$asset_identify];
 
+		$
+
 		$new_asset_value = $asset["asset_value"];
 		$quantity = $asset["quantity"];
 
