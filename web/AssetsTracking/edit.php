@@ -56,7 +56,7 @@ if (isset($_POST["update"])) {
 	}
 }
 
-// header("Location: AssetTracker.php");
-// exit;
+header("Location: AssetTracker.php");
+exit;
 
 ?>
