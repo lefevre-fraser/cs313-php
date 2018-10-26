@@ -85,7 +85,7 @@ session_start();
 
 			echo "<tr>";
 
-			echo "<th>";
+			echo "<th scope='row'>";
 			echo "<input type='checkbox' name='assets[]' value='" . $UniqueName . "' id='" . $UniqueName . "'>";
 			echo "<label class='tab'>$asset_name</label>";
 			echo "</th>";
@@ -104,7 +104,7 @@ session_start();
 			$total += ($row["quantity"] * $row["asset_value"]);
 		}
 
-		echo "<tr><th class='row'>Total Asset Worth</th>";
+		echo "<tr><th scope='row'>Total Asset Worth</th>";
 		echo "<td></td><td></td>";
 		echo "<td>$" . $total . "</td></tr>";
 		echo "</tbody></table>";
