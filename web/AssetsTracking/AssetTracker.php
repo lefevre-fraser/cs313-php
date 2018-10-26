@@ -92,7 +92,7 @@ session_start();
 			echo "</td>";
 
 			echo "<td class='text-nowrap'>$";
-			echo "<input type='number' value='" . $row["asset_value"] . "' name=\"" . $UniqueName . "['asset_value']\">";
+			echo "<input type='number' value='$row['asset_value']' name='$UniqueName['asset_value']'>";
 			echo "</td>";
 
 			echo "<td>$" . ($row["quantity"] * $row["asset_value"]) . "</td>";
