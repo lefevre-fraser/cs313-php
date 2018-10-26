@@ -66,9 +66,9 @@ session_start();
 
 		echo "<form action='edit.php' method='post'>";
 		echo "<button type='submit' name='update'>Update Assets</button>";
-		echo "<button type='submit' name='delete' onclick=\"return confirmDelete();\">Delete Assets</button><br>";
+		echo "<button type='submit' name='delete' onclick=\"return confirmDelete();\">Delete Assets</button>";
 
-		echo "<table class='table table-dark'><thead><tr>";
+		echo "<table class='table table-dark'><br><thead><tr>";
 		echo "<th class='col text-nowrap'>Asset Name</th>";
 		echo "<th class='col text-nowrap'>Quantity</th>";
 		echo "<th class='col text-nowrap'>Unit Value</th>";
