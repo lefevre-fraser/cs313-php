@@ -113,10 +113,6 @@ session_start();
 		echo "<button type='submit' name='delete' onclick=\"return confirmDelete();\">Delete Assets</button>";
 		echo "</form>";
 
-		for ($i=0; $i < 10; $i++) { 
-			echo "<br>\n";
-		}
-
 		echo "</div>";
 	}
 	else {
