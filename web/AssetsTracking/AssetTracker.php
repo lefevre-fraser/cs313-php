@@ -91,11 +91,11 @@ session_start();
 			echo "</th>";
 
 			echo "<td>";
-			print("<input type=\"number\" value=\"$quantity\" name=\"" . $UniqueName . "[quantity]\" onchange=\"check($UniqueName)\">");
+			print("<input type=\"number\" value=\"$quantity\" name=\"" . $UniqueName . "[quantity]\" onchange=\"check('$UniqueName')\">");
 			echo "</td>";
 
 			echo "<td class='text-nowrap'>$";
-			print("<input type=\"number\" value=\"$asset_value\" name=\"" . $UniqueName . "[asset_value]\" onchange=\"check($UniqueName)\">");
+			print("<input type=\"number\" value=\"$asset_value\" name=\"" . $UniqueName . "[asset_value]\" onchange=\"check('$UniqueName')\">");
 			echo "</td>";
 
 			echo "<td>$" . ($row["quantity"] * $row["asset_value"]) . "</td>";
