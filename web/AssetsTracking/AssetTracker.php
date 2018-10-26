@@ -79,20 +79,23 @@ session_start();
 
 		foreach ($user_assets as $row) {
 			$UniqueName = $row["asset_id"] . "$" . $row["asset_value"];
+			$quantity = $row['quantity'];
+			$asset_name = $row["asset_name"];
+			$asset_value = $row['asset_value'];
 
 			echo "<tr>";
 
 			echo "<th class='row'>";
 			echo "<input type='checkbox' name='assets[]' value='" . $UniqueName . "'>";
-			echo "<label class='tab'>" . $row["asset_name"] . "</label>";
+			echo "<label class='tab'>$asset_name</label>";
 			echo "</th>";
 
 			echo "<td>";
-			echo "<input type=\"number\" value=\"$row['quantity']\" name=\"$UniqueName['quantity']\">";
+			print("<input type=\"number\" value=\"$quantity\" name=\"" . $UniqueName . "['quantity']\">");
 			echo "</td>";
 
 			echo "<td class='text-nowrap'>$";
-			echo "<input type=\"number\" value=\"$row['asset_value']\" name=\"$UniqueName['asset_value']\">";
+			print("<input type=\"number\" value=\"$asset_value\" name=\"" . $UniqueName . "['asset_value']\">");
 			echo "</td>";
 
 			echo "<td>$" . ($row["quantity"] * $row["asset_value"]) . "</td>";
