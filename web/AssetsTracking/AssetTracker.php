@@ -68,7 +68,7 @@ session_start();
 		echo "<button type='submit' name='update'>Update Assets</button>";
 		echo "<button type='submit' name='delete' onclick=\"return confirmDelete();\">Delete Assets</button>";
 
-		echo "<table class='table table-dark'><p></p><thead><tr>";
+		echo "<table class='table'><p></p><thead class='thead-dark'><tr>";
 		echo "<th class='col text-nowrap'>Asset Name</th>";
 		echo "<th class='col text-nowrap'>Quantity</th>";
 		echo "<th class='col text-nowrap'>Unit Value</th>";
@@ -104,9 +104,9 @@ session_start();
 			$total += ($row["quantity"] * $row["asset_value"]);
 		}
 
-		echo "<tr><th scope='row'>Total Asset Worth</th>";
-		echo "<td></td><td></td>";
-		echo "<td>$" . $total . "</td></tr>";
+		echo "<thead class='thead-dark'><tr><th scope='row'>Total Asset Worth</th>";
+		echo "<th colspan=\"2\"></th>";
+		echo "<th>$" . $total . "</th></tr></thead>";
 		echo "</tbody></table>";
 
 		echo "<button type='submit' name='update'>Update Assets</button>";
