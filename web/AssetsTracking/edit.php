@@ -26,8 +26,8 @@ if (isset($_POST["update"])) {
 		$queryString  = "select change_user_asset(";
 		$queryString .=        $user_id;
 		$queryString .= ", " . $asset_id;
-		$queryString .= ", " . $old_asset_value; 
-		$queryString .= ", " . $new_asset_value;
+		$queryString .= ", " . $new_asset_value; 
+		$queryString .= ", " . $old_asset_value;
 		$queryString .= ", " . $quantity;
 		$queryString .= ")";
 
