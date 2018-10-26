@@ -11,6 +11,8 @@ body {
 	margin-bottom: 3%;
 	margin-top: 3%;
 	padding: 2%;
+	padding-left: 4%;
+	padding-right: 4%;
 }
 
 .tab {
@@ -24,4 +26,4 @@ body {
 .border-black {
 	border: black;
 	border-style: solid none solid none;
-}
+}	
