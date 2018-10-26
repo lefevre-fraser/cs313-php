@@ -19,6 +19,7 @@ $insert_error =
 $change_error = 
 	array(
 		0 => 'An uknown error has occured while trying to change your assets',
+		1 => 'Asset values successfully changed',
 		2 => 'You already have an asset with that name and unit value',
 		3 => 'Multiple Errors occured while changing your asset information');
 
@@ -50,10 +51,7 @@ function insert_error_scripts()
 
 	// chagning asset values errors
 	if (isset($_SESSION["change_error"])) {
-
-		if ($_SESSION["change_error"] != 1) {
-			echo "alert(\"" . $GLOBALS["change_error"][$_SESSION["change_error"]] . "\");";
-		}
+		echo "alert(\"" . $GLOBALS["change_error"][$_SESSION["change_error"]] . "\");";
 
 		unset($_SESSION["change_error"]);
 	}
