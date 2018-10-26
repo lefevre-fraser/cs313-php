@@ -68,7 +68,7 @@ session_start();
 		echo "<button type='submit' name='update'>Update Assets</button>";
 		echo "<button type='submit' name='delete' onclick=\"return confirmDelete();\">Delete Assets</button>";
 
-		echo "<table class='table table-dark'><br> <thead><tr>";
+		echo "<table class='table table-dark'><p></p><thead><tr>";
 		echo "<th class='col text-nowrap'>Asset Name</th>";
 		echo "<th class='col text-nowrap'>Quantity</th>";
 		echo "<th class='col text-nowrap'>Unit Value</th>";
