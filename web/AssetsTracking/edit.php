@@ -15,7 +15,7 @@ if (isset($_POST["update"])) {
 		$new_asset_value = $_POST[$asset]["asset_value"];
 		$quantity = $_POST[$asset]["quantity"];
 
-		echo json_encode($asset)
+		echo json_encode($asset);
 
 		$queryString  = "select change_user_asset(";
 		$queryString .=        $user_id;
