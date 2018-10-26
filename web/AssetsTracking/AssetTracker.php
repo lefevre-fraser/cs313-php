@@ -88,7 +88,7 @@ session_start();
 			echo "</th>";
 
 			echo "<td>";
-			echo "<input type=\"number\" value=\"$row['quantity']\" name=\"$UniqueName['quantity']\">";
+			echo "<input type='number' value='$row['quantity']' name='$UniqueName['quantity']'>";
 			echo "</td>";
 
 			echo "<td class='text-nowrap'>$";
