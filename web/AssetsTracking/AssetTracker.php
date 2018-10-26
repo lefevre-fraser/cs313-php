@@ -68,7 +68,7 @@ session_start();
 		echo "<button type='submit' name='update'>Update Assets</button>";
 		echo "<button type='submit' name='delete' onclick=\"return confirmDelete();\">Delete Assets</button>";
 
-		echo "<table class='table'><p></p><thead class='thead-dark'><tr>";
+		echo "<table class='table'><p></p><thead class='thead-dark'><tr class='border-black'>";
 		echo "<th class='col text-nowrap'>Asset Name</th>";
 		echo "<th class='col text-nowrap'>Quantity</th>";
 		echo "<th class='col text-nowrap'>Unit Value</th>";
@@ -83,7 +83,7 @@ session_start();
 			$asset_name = $row["asset_name"];
 			$asset_value = $row['asset_value'];
 
-			echo "<tr>";
+			echo "<tr class='border-black'>";
 
 			echo "<th scope='row'>";
 			echo "<input type='checkbox' name='assets[]' value='" . $UniqueName . "' id='" . $UniqueName . "'>";
@@ -104,7 +104,7 @@ session_start();
 			$total += ($row["quantity"] * $row["asset_value"]);
 		}
 
-		echo "<thead class='thead-dark'><tr><th scope='row'>Total Asset Worth</th>";
+		echo "<thead class='thead-dark'><tr class='border-black'><th scope='row'>Total Asset Worth</th>";
 		echo "<th colspan=\"2\"></th>";
 		echo "<th>$" . $total . "</th></tr></thead>";
 		echo "</tbody></table>";
