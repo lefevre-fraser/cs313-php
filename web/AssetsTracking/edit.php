@@ -12,10 +12,8 @@ if (isset($_POST["update"])) {
 
 		$asset = $_POST[$asset_identify];
 
-		$new_asset_value = $_POST[$asset]["asset_value"];
-		$quantity = $_POST[$asset]["quantity"];
-
-		echo json_encode($asset);
+		$new_asset_value = $asset["asset_value"];
+		$quantity = $asset["quantity"];
 
 		$queryString  = "select change_user_asset(";
 		$queryString .=        $user_id;
@@ -50,7 +48,7 @@ if (isset($_POST["update"])) {
 	}
 }
 
-// header("Location: AssetTracker.php");
-// exit;
+header("Location: AssetTracker.php");
+exit;
 
 ?>
