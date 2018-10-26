@@ -1,6 +1,6 @@
 <?php
 
-$LoginPage = '<div id="main_div" class="container h-100 d-flex justify-content-center">';
+$LoginPage = '<div class="container h-100 d-flex justify-content-center">';
 
 $LoginPage .=
 	'<div class="jumbotron my-auto">
