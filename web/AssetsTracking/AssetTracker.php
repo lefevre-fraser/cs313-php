@@ -86,16 +86,16 @@ session_start();
 			echo "<tr>";
 
 			echo "<th class='row'>";
-			echo "<input type='checkbox' name='assets[]' value='" . $UniqueName . "'>";
+			echo "<input type='checkbox' name='assets[]' value='" . $UniqueName . "' id='" . $UniqueName . "'>";
 			echo "<label class='tab'>$asset_name</label>";
 			echo "</th>";
 
 			echo "<td>";
-			print("<input type=\"number\" value=\"$quantity\" name=\"" . $UniqueName . "[quantity]\">");
+			print("<input type=\"number\" value=\"$quantity\" name=\"" . $UniqueName . "[quantity]\" onchange=\"check($UniqueName)\">");
 			echo "</td>";
 
 			echo "<td class='text-nowrap'>$";
-			print("<input type=\"number\" value=\"$asset_value\" name=\"" . $UniqueName . "[asset_value]\">");
+			print("<input type=\"number\" value=\"$asset_value\" name=\"" . $UniqueName . "[asset_value]\" onchange=\"check($UniqueName)\">");
 			echo "</td>";
 
 			echo "<td>$" . ($row["quantity"] * $row["asset_value"]) . "</td>";
