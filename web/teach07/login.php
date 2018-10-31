@@ -23,7 +23,7 @@ if (password_verify($password, $hashed_password)) {
 	exit;
 } else {
 	$_SESSION["loggin_in"] = false;
-	header("Location: signin.php")
+	header("Location: signin.php");
 	exit;
 }
 

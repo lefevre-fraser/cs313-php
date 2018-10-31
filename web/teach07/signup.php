@@ -9,8 +9,8 @@
 		<input type="text" name="user_name"><br>
 		<label>Password:</label><br>
 		<input type="password" name="password"><br>
-		<button type="submit">Sign In</button><br>
-		<a href="signin.php">Have an Account? Sign Ip Here!</a>
+		<button type="submit">Sign Up</button><br>
+		<a href="signin.php">Have an Account? Sign In Here!</a>
 	</form>
 </body>
 </html>
