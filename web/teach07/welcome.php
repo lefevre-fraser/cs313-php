@@ -18,7 +18,7 @@ if (isset($_SESSEION["logged_in"])) {
 	<h1>
 		
 		<?php
-		echo "Welcome " . $_SESSEION["current_user"];
+		echo "Welcome " . $_SESSION["current_user"];
 		?>
 
 	</h1>
