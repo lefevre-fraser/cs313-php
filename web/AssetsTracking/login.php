@@ -6,26 +6,30 @@
 	$queryString  = "select s.salt_value";
 	$queryString .= " from salts s inner join users u";
 	$queryString .= " on s.salt_id = u.salt_id";
-	$queryString .= " where u.user_name = '" . $_POST["user_name"] . "'";
+	$queryString .= " where u.user_name = :username"; "'" . $_POST["user_name"] . "'";
 
-	$salt = $db->query($queryString);
-	$saltString = "";
-	foreach ($salt as $row) {
-		$saltString = $row["salt_value"];
-	}
+	$query = $db->prepare($queryString);
+	$query->bindValue(':username', $_POST["user_name"], PDO::PARAM_STR);
+	$query->execute();
+	$results = $query->fetchAll();
 
-	$options = [ 'cost' => 8, 'salt' => $saltString];
+	$salt = $results[0]["salt_value"];
+
+	$options = [ 'cost' => 8, 'salt' => $salt];
 	$password = password_hash($_POST["password"], PASSWORD_BCRYPT, $options);
 
-	$queryString =  "select user_name, user_id, fname, lname, mname";
+	$queryString  = "select user_name, user_id, fname, lname, mname";
 	$queryString .= " from users";
-	$queryString .= " where user_name = '" . $_POST["user_name"] . "'";
-	$queryString .= " and hashed_password = '" . $password . "'";
+	$queryString .= " where user_name = :username"; 
+	$queryString .= " and hashed_password = :hashedpassword"; 
 
+	$query = $db->prepare($queryString);
+	$query->bindValue(':username',       $_POST["user_name"], PDO::PARAM_STR);
+	$query->bindValue(':hashedpassword', $password,           PDO::PARAM_STR);
+	$query->execute();
+	$results = $query->fetchAll();
 
-	$user_name = $db->query($queryString);
-
-	foreach ($user_name as $row) {
+	foreach ($results as $row) {
 		if (isset($row["user_name"])) {
 			$_SESSION["user_name"] = $row["user_name"];
 			$_SESSION["user_id"] = $row["user_id"];

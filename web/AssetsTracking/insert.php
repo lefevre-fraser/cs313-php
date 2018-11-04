@@ -46,13 +46,13 @@ if (isset($_POST["new_user_name"])) {
 	$queryString .= "  )";
 
 	$query = $db->prepare($queryString);
-	$query->bindValue('newusername',    $new_user_name,  PDO::PARAM_STR);
-	$query->bindValue('fname',          $fname,          PDO::PARAM_STR);
-	$query->bindValue('lname',          $lname,          PDO::PARAM_STR);
-	$query->bindValue('areacode',       $area_code,      PDO::PARAM_STR);
-	$query->bindValue('phonenumber',    $phone_number,   PDO::PARAM_STR);
-	$query->bindValue('saltid',         $salt_id,        PDO::PARAM_INT);
-	$query->bindValue('hashedpassword', $HashedPassword, PDO::PARAM_STR);
+	$query->bindValue(':newusername',    $new_user_name,  PDO::PARAM_STR);
+	$query->bindValue(':fname',          $fname,          PDO::PARAM_STR);
+	$query->bindValue(':lname',          $lname,          PDO::PARAM_STR);
+	$query->bindValue(':areacode',       $area_code,      PDO::PARAM_STR);
+	$query->bindValue(':phonenumber',    $phone_number,   PDO::PARAM_STR);
+	$query->bindValue(':saltid',         $salt_id,        PDO::PARAM_INT);
+	$query->bindValue(':hashedpassword', $HashedPassword, PDO::PARAM_STR);
 	if (isset($_POST["mname"]) && $_POST["mname"] != "") {
 		$query->bindValue(':mname', $mname, PDO::PARAM_STR);
 	}
