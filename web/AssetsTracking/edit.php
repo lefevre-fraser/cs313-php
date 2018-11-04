@@ -43,9 +43,9 @@ if (isset($_POST["update"])) {
 		$asset = $_POST[$asset_identify];
 
 		$queryString  = "delete from user_assets";
-		$queryString .= " where user_id = :userid";   . $user_id;
-		$queryString .= " and asset_id = :assetid";    . $asset_id;
-		$queryString .= " and asset_value = :oldassetvalue"; . $old_asset_value; 
+		$queryString .= " where user_id = :userid";
+		$queryString .= " and asset_id = :assetid";
+		$queryString .= " and asset_value = :oldassetvalue";
 
 		$query = $db->prepare($queryString);
 		$query->bindValue(':userid',        $user_id,         PDO::PARAM_INT);
