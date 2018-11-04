@@ -16,14 +16,19 @@ if (isset($_POST["update"])) {
 		$quantity = $asset["quantity"];
 
 		$queryString  = "select change_user_asset(";
-		$queryString .=        $user_id;
-		$queryString .= ", " . $asset_id;
-		$queryString .= ", " . $new_asset_value; 
-		$queryString .= ", " . $old_asset_value;
-		$queryString .= ", " . $quantity;
+		$queryString .= "  :userid";
+		$queryString .= ", :assetid";
+		$queryString .= ", :newassetvalue";
+		$queryString .= ", :oldassetvalue";
+		$queryString .= ", :quantity";
 		$queryString .= ")";
 
 		$query = $db->prepare($queryString);
+		$query->bindValue(':userid',        $user_id,         PDO::PARAM_INT);
+		$query->bindValue(':assetid',       $assetid,         PDO::PARAM_INT);
+		$query->bindValue(':newassetvalue', $new_asset_value, PDO::PARAM_INT);
+		$query->bindValue(':oldassetvalue', $old_asset_value, PDO::PARAM_INT);
+		$query->bindValue(':quantity',      $quantity,        PDO::PARAM_INT);
 		$query->execute();
 		$error_code = $query->fetchAll();
 
@@ -38,11 +43,14 @@ if (isset($_POST["update"])) {
 		$asset = $_POST[$asset_identify];
 
 		$queryString  = "delete from user_assets";
-		$queryString .= " where user_id = "   . $user_id;
-		$queryString .= " and asset_id = "    . $asset_id;
-		$queryString .= " and asset_value = " . $old_asset_value; 
+		$queryString .= " where user_id = :userid";   . $user_id;
+		$queryString .= " and asset_id = :assetid";    . $asset_id;
+		$queryString .= " and asset_value = :oldassetvalue"; . $old_asset_value; 
 
 		$query = $db->prepare($queryString);
+		$query->bindValue(':userid',        $user_id,         PDO::PARAM_INT);
+		$query->bindValue(':assetid',       $asset_id,        PDO::PARAM_INT);
+		$query->bindValue(':oldassetvalue', $old_asset_value, PDO::PARAM_INT);
 		$query->execute();
 		$result = $query->fetchAll();
 	}
