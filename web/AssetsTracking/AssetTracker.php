@@ -48,7 +48,7 @@ session_start();
 		$queryString .= " from user_assets ua inner join assets a";
 		$queryString .= " on ua.asset_id = a.asset_id";
 		$queryString .= " where ua.user_id = :userid";
-		$queryString .= " and UPPER(a.asset_name) like '%:searchcontext%'";
+		//$queryString .= " and UPPER(a.asset_name) like '%:searchcontext%'";
 
 		if (isset($_GET["order_by"])) {
 			if ($_GET["order_by"] == "asset_name") {
