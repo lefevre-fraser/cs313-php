@@ -63,7 +63,7 @@ session_start();
 		}
 
 		$query = $db->prepare($queryString);
-		$query->bindValue(':userid', $user_id, PDO::PARAM_STR);
+		$query->bindValue(':userid', $user_id, PDO::PARAM_INT);
 		if (isset($_GET["search_context"])) {
 			$search_context = strtoupper($_GET["search_context"]);
 		}
