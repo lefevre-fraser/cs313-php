@@ -67,7 +67,7 @@ session_start();
 		if (isset($_GET["search_context"])) {
 			$search_context = strtoupper($_GET["search_context"]);
 		}
-		$query->bindValue(':searchcontext', $search_context, PDO::PARAM_STR);
+		//$query->bindValue(':searchcontext', $search_context, PDO::PARAM_STR);
 		$query->execute();
 		$user_assets = $query->fetchAll();
 
