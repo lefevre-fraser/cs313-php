@@ -25,7 +25,7 @@ session_start();
 		include_once("header.php");
 		echo $header;
 
-		echo "<form action='AssetTracker.php' method='post'>";
+		echo "<form action='AssetTracker.php' method='get'>";
 		echo "<label>Search by Asset Name:</label><br>";
 		echo "<input name='search_context' type='text' placeholder='Couch'><br>";
 
@@ -41,28 +41,35 @@ session_start();
 
 		include_once("DatabaseConnect.php");
 
+		$user_id = $_SESSION['user_id'];
+		$search_context = ""; 
+
 		$queryString =  "select a.asset_name, a.asset_id, ua.quantity, ua.asset_value";
 		$queryString .= " from user_assets ua inner join assets a";
 		$queryString .= " on ua.asset_id = a.asset_id";
-		$queryString .= " where ua.user_id = " . $_SESSION['user_id'];
+		$queryString .= " where ua.user_id = :userid";
+		$queryString .= " and UPPER(a.asset_name) like '%:searchcontext%'";
 
-		if (isset($_POST["search_context"])) {
-			$queryString .= " and UPPER(a.asset_name) like '%" . strtoupper($_POST["search_context"]) . "%'";
-		}
-
-		if (isset($_POST["order_by"])) {
-			if ($_POST["order_by"] == "asset_name") {
+		if (isset($_GET["order_by"])) {
+			if ($_GET["order_by"] == "asset_name") {
 				$queryString .= " order by a.asset_name, ua.quantity, ua.asset_value";
-			} else if ($_POST["order_by"] == "quantity") {
+			} else if ($_GET["order_by"] == "quantity") {
 				$queryString .= " order by ua.quantity, a.asset_name, ua.asset_value";
-			} else if ($_POST["order_by"] == "asset_value") {
+			} else if ($_GET["order_by"] == "asset_value") {
 				$queryString .= " order by ua.asset_value, a.asset_name, ua.quantity";
 			}
 		} else {
 			$queryString .= " order by a.asset_name, ua.quantity, ua.asset_value";
 		}
 
-		$user_assets = $db->query($queryString);
+		$query = $db->prepare($queryString);
+		$query->bindValue(':userid', $user_id, PDO::PARAM_STR);
+		if (isset($_GET["search_context"])) {
+			$search_context = strtoupper($_GET["search_context"]);
+		}
+		$query->bindValue(':searchcontext', $search_context, PDO::PARAM_STR);
+		$query->execute();
+		$user_assets = $query->fetchAll();
 
 		echo "<form action='edit.php' method='post'>";
 		echo "<button type='submit' name='update'>Update Assets</button>";
