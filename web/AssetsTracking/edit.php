@@ -21,7 +21,7 @@ if (isset($_POST["update"])) {
 		$queryString .= ", :newassetvalue";
 		$queryString .= ", :oldassetvalue";
 		$queryString .= ", :quantity";
-		$queryString .= ")";
+		$queryString .= " )";
 
 		$query = $db->prepare($queryString);
 		$query->bindValue(':userid',        $user_id,         PDO::PARAM_INT);
