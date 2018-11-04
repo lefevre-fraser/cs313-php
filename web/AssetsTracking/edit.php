@@ -25,7 +25,7 @@ if (isset($_POST["update"])) {
 
 		$query = $db->prepare($queryString);
 		$query->bindValue(':userid',        $user_id,         PDO::PARAM_INT);
-		$query->bindValue(':assetid',       $assetid,         PDO::PARAM_INT);
+		$query->bindValue(':assetid',       $asset_id,         PDO::PARAM_INT);
 		$query->bindValue(':newassetvalue', $new_asset_value, PDO::PARAM_INT);
 		$query->bindValue(':oldassetvalue', $old_asset_value, PDO::PARAM_INT);
 		$query->bindValue(':quantity',      $quantity,        PDO::PARAM_INT);
