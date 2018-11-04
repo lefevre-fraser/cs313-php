@@ -5,21 +5,6 @@ require_once("DatabaseConnect.php");
 
 if (isset($_POST["new_user_name"])) {
 
-	// $queryString  = "select user_name from users";
-	// $queryString .= " where user_name = '" . $_POST["new_user_name"] . "'";
-
-	// $query       = $db->prepare($queryString);
-	// $query->execute();
-	// $queryResult = $query->fetchAll();
-
-	// if (sizeof($queryResult) > 0) {
-	// 	$_SESSION["user_name_exists"] = true;
-	// 	header("Location: NewUser.php");
-	// 	exit;
-	// } else {	
-	// 	$_SESSION["user_name_exists"] = false;
-	// }
-
 	$queryString    = "select salt_id, salt_value from salts";
 	$query          = $db->prepare($queryString);
 	$query->execute();
@@ -39,22 +24,38 @@ if (isset($_POST["new_user_name"])) {
 	$area_code 		= $area_code[0];
 	$phone_number 	= $phone_number[1];
 
+	$new_user_name = $_POST["new_user_name"];
+	$fname         = $_POST["fname"];
+	$lname         = $_POST["lname"];
+	$mname         = "";
+
 	$queryString  = "select insert_user(";
-	$queryString .= "'"   . $_POST["new_user_name"] . "'";
-	$queryString .= ", '" . $_POST["fname"] 		. "'";
-	$queryString .= ", '" . $_POST["lname"] 		. "'";
-	$queryString .= ", '" . $area_code 				. "'";
-	$queryString .= ", '" . $phone_number 			. "'";
-	$queryString .= ", "  . $salt_id;
-	$queryString .= ", '" . $HashedPassword 		. "'";
+	$queryString .= "  :newusername"; 
+	$queryString .= ", :fname"; 
+	$queryString .= ", :lname"; 
+	$queryString .= ", :areacode"; 
+	$queryString .= ", :phonenumber"; 
+	$queryString .= ", :saltid"; 
+	$queryString .= ", :hashedpassword"; 
 
 	if (isset($_POST["mname"]) && $_POST["mname"] != "") {
-		$queryString .= ", '" . $_POST["mname"] . "'";
+		$mname = $_POST["mname"];
+		$queryString .= ", :mname"; 
 	}
 
-	$queryString .= ")";
+	$queryString .= "  )";
 
 	$query = $db->prepare($queryString);
+	$query->bindValue('newusername',    $new_user_name,  PDO::PARAM_STR);
+	$query->bindValue('fname',          $fname,          PDO::PARAM_STR);
+	$query->bindValue('lname',          $lname,          PDO::PARAM_STR);
+	$query->bindValue('areacode',       $area_code,      PDO::PARAM_STR);
+	$query->bindValue('phonenumber',    $phone_number,   PDO::PARAM_STR);
+	$query->bindValue('saltid',         $salt_id,        PDO::PARAM_INT);
+	$query->bindValue('hashedpassword', $HashedPassword, PDO::PARAM_STR);
+	if (isset($_POST["mname"]) && $_POST["mname"] != "") {
+		$query->bindValue(':mname', $mname, PDO::PARAM_STR);
+	}
 	$query->execute();
 	$error_code = $query->fetchAll();
 
@@ -64,21 +65,29 @@ if (isset($_POST["new_user_name"])) {
 		header("Location: AssetTracker.php");
 	} else {
 		header("Location: {$_SERVER['HTTP_REFERER']}");
-	}	
-	
+	}
 
 	exit;
 
 } else {
 
+	$user_name   = $_SESSION["user_name"];
+	$quantity    = $_POST["quantity"];
+	$asset_value = $_POST["asset_value"];
+	$asset_name  = $_POST["asset_name"];
+
 	$queryString  = "select insert_asset(";
-	$queryString .= "'"   . $_SESSION["user_name"] . "'";
-	$queryString .= ", "  . $_POST["quantity"];
-	$queryString .= ", "  . $_POST["asset_value"];
-	$queryString .= ", '" . $_POST["asset_name"]   . "'";
-	$queryString .= ")";
+	$queryString .= "  :username"; 
+	$queryString .= ", :quantity";
+	$queryString .= ", :assetvalue"; 
+	$queryString .= ", :assetname"; 
+	$queryString .= "  )";
 
 	$query = $db->prepare($queryString);
+	$query->bindValue(':username',   $user_name,   PDO::PARAM_STR);
+	$query->bindValue(':quantity',   $quantity,    PDO::PARAM_INT);
+	$query->bindValue(':assetvalue', $asset_value, PDO::PARAM_INT);
+	$query->bindValue(':assetname',  $asset_name,  PDO::PARAM_STR);
 	$query->execute();
 	$error_code = $query->fetchAll();
 
